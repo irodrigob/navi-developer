@@ -1,0 +1,48 @@
+baseURL = "https://irodrigob.github.io/"
+languageCode = "es-es"
+title = "Navi-developer"
+copyright = ""
+theme = "npqq-hugo"
+pygmentsUseClasses=true
+publishDir = "irodrigob.github.io"
+
+[params]
+  author = "Iván Rodrigo"
+  description = "Desarrollador en ABAP, principalmente, y cualquier otro lenguaje que surja"
+  keywords = "desarrollador abap"
+  useAvatar = false
+  microBlogSection = "posts"
+  displayMicroBlog = false
+  displayRecent = true
+  displayHomeContent = true
+  recentMax = 4
+  mail = "irodrigob@gmail.com"
+  phone = ""
+  formspreeID = ""
+
+[menu]
+  [[menu.main]]
+    name = "home"
+    pre = "<i class=\"fas fa-home fa-sm\"></i>"
+    url = "/"
+    weight = -9 
+  [[menu.main]]
+    name = "blog"
+    pre = "<i class=\"fas fa-keyboard fa-ms\"></i>"
+    url = "/blog/"
+    weight = -8
+  [[menu.main]]
+    name = "tags"
+    pre = "<i class=\"fas fa-tags fa-ms\"></i>"
+    url = "/tags"
+    weight = -7 
+  [[menu.main]]
+    name = "github"
+    pre = "<i class=\"fab fa-github fa-ms\"></i>"
+    url = "https://github.com/irodrigob"
+    weight = -6   
+  [[menu.main]]
+    name = "contact"
+    pre = "<i class=\"far fa-envelope\"></i>"
+    url = "/contact"
+    weight = -1 
