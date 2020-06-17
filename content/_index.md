@@ -1,6 +1,7 @@
 ---
 title: Bienvenidos
 type: docs
+bookToc: false
 ---
 
 # Introducción
@@ -11,4 +12,4 @@ No nos vamos a engañar la mayor parte de la información será sobre ABAP, leng
 
 # Organización
 
-En el menú de la izquierda iré organizando las distintas áreas donde he ido haciendo cosas 
+En el menú de la izquierda es donde iré organizando por temática de lo que vaya publicando. Segun vayan avanzando mis conocmientos de en Hugo no descarto poner un índice o algo en esta página de inicio, pero de momento comenzamos así.
