@@ -59,3 +59,6 @@ El en título se puede poner lo que sea, ejemplo el ordenador donde has generado
 
 ![Introducir frase](/images/github/generar_clave_rsa/resultado_anyadir_clave_usuario.png)
 
+# Bibliografía
+
+Para poder este artículo me he bsado en el siguiente [artículo](https://medium.com/@ancizj393/crear-una-clave-ssh-en-git-y-vincular-en-tu-cuenta-de-github-e7a6b22bc93f).
