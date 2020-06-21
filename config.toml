@@ -40,7 +40,7 @@ enableGitInfo = true
 # [[menu.before]]
 [[menu.after]]
   name = "Github"
-  url = "https://github.com/irodrigb"
+  url = "https://github.com/irodrigob"
   weight = 10
 
 
