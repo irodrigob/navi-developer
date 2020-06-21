@@ -2,10 +2,13 @@
 title: ABAP
 description: Lenguaje de desarrollo ABAP
 weight: 20
+bookCollapseSection: true
 ---
 
 # ABAP
 
-fila 1
+Se aglutina todo lo referente al lenguaje de programación de SAP.
 
-fila 2
+# Publicaciones
+
+{{<section>}}

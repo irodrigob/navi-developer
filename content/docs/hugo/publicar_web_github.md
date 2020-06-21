@@ -107,11 +107,13 @@ El archivo de configuración *config.toml* hay que realizar los siguientes cambi
 
 Así es como quedaría(*Nota: Ejemplo del fichero que estoy usando con tema que estoy usando actualmente*):
 
-```baseURL = "https://irodrigob.github.io/"```
-```languageCode = "es-es"```
-```title = "Navi-developer"```
-```theme = "hugo-book"```
-```publishDir = "irodrigob.github.io" ```
+```
+baseURL = "https://irodrigob.github.io/"
+languageCode = "es-es"
+title = "Navi-developer"
+theme = "hugo-book"
+publishDir = "irodrigob.github.io" 
+```
 
 Ahora de nuevo vía consola, y en el directorio del sitio, con el comando ```hugo``` se creará la página Web en el directorio del submodulo *github.io*
 
@@ -123,9 +125,11 @@ Si el resultado es como el de la imagen es que todo es correcto.
 
 Ahora para poder subir los archivos generados a nuestro repositorio *github.io* hay que ir al directorio de dicho repositorio y lanzar los siguientes comandos en la consola de windows:
 
-```git add .```
-```git commit -m "Primera subida!!"```
-```git push origin master```
+```
+git add .
+git commit -m "Primera subida!!"
+git push origin master
+```
 
 En consola aparecerá algo parecido a esto:
 
