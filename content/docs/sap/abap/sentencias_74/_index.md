@@ -1,5 +1,5 @@
 ---
-title: Sentencias 7.4
+title: Sentencias >= 7.4
 description: Nuevas sentencias aparecidas en la versión 7.4
 weight: 20
 ---
