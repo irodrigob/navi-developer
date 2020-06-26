@@ -1,11 +1,11 @@
 ---
-title: Ejemplos generales
-description: Ejemplos válidos en cualquier parte del BOPF
+title: Código ejemplo dentro del BOPF
+description: Código ejemplo dentro del BOPF
 ---
 
 # Objetivo
 
-Aquí estarán ejemplos de código que puede ser usado en distintos ambitos de uso de los BOFP
+Aquí están las plantillas de ejemplo ABAP que se usarán dentro de las clases que se usarán en validaciones, determinaciones, etc..
 
 # Instanciar clase de mensajes
 
