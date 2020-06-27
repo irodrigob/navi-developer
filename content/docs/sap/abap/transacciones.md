@@ -20,6 +20,7 @@ I18N | Internacionalizacion. Permite configurar el smartforms para usar word (a 
 CG3Y | Descarga de ficheros del servidor a local
 CG3Z | Subido de fichero al servidor desde local
 SM01 | Bloquea transacciones estándar
+SLXT | Guarda las traducciones hechas en la transacción SE63.
 
 ## Financieras
 

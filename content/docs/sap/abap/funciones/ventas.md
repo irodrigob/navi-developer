@@ -1,19 +1,27 @@
 ---
-title: Funciones ventas
-description: Funciones ventas
-bookCollapseSection: true
+title: Ventas
+description: Ventas
 ---
 
 # Objetivo
 
-Funciones de ventas
+Funciones del módulo de ventas(SD). 
+
+Al final hay una sección de ejemplos para algunas funciones. **No todas las funciones tienen ejemplo.**
 
 # Lista
 
-Función | Descripción | Ejemplo
---------|-------- | --------
+Función | Descripción
+--------|-------- 
 RV_DOCUMENT_FLOW | Sacar el flujo de documentos en ventas | 
-```tpl
+SD_OBJECT_TYPE_DETERMINE | Se le pasa el tipo de documento de SD y devuelve el objeto workflow asociado.
+
+
+ # Ejemplos 
+
+ ## RV_DOCUMENT_FLOW
+
+ ```tpl
 FORM ir_flujo  USING pe_datos TYPE LINE OF zzc_sd49501=>ty_t_alv.
   DATA ls_vbco6 TYPE vbco6.
 
