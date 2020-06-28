@@ -12,7 +12,10 @@ Es un herramienta muy útil porque te ahorra toda la gestión que hay que hacer 
 
 Aquí iré recogiendo un poco de todo de lo que voy haciendo y/o aprendiendo sobre los BOPF.
 
-En el siguiente [enlace](https://github.com/irodrigob/ABAP_BOPF_UTILS) están las utilidades que voy creando para los BOPF en formato ABAPGit.
+
+# Proyectos personales
+
+En el siguiente [enlace](https://github.com/irodrigob/ABAP_BOPF_UTILS) están las utilidades que voy creando para los BOPF.
 
 # Publicaciones
 

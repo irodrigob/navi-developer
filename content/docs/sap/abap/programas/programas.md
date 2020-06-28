@@ -40,18 +40,6 @@ RGUGBR00 | Genera la sustituciones y validaciones de FI
 RHMOVE30 | Programa para pasar a una orden de transporte las estructura organizativa de HR
 RPUDELPN | Borrado masivo de empleados de HR (transaccion PU00 para individual)
 
-## Archive link / GOS / BDS / Etc.
-
-Programa | Descripción
---------|--------
-RSAOT1 | Ejemplo de cómo subir y leer documento en archivelink
-
-## IDOC
-
-Programa | Descripción
---------|--------
-RC1_IDOC_SET_STATUS | Permite cambiar el status de un idoc a otro
-
 ## Workflow
 
 Programa | Descripción

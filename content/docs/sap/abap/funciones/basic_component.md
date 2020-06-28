@@ -63,12 +63,6 @@ Función | Descripción
 --------|--------
 SSFRT_READ_TEXTMODULE | Devuele el texto creado por la transaccion SMARTFORMS
 
-## Archivelink / GOS / BDS / etc.
-
-Función | Descripción
---------|--------
-BDS_GOS_CONNECTIONS_GET	| Obtiene los adjuntos de un objeto del GOS. El parámetro es la clase de objeto definida en la SWO1
-
 ## ALV
 
 Función | Descripción

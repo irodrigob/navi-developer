@@ -51,12 +51,6 @@ Transacción | Descripción
 --------|--------
 WEDI | Menu ambito de IDOCS
 
-## Archive link
-
-Transacción | Descripción
---------|--------
-SOA_COPY | Menu ambito de Archive links
-
 ## Recursos humanos
 
 Transacción | Descripción
