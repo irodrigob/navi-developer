@@ -33,54 +33,73 @@ DATA mo_svc_mngr TYPE REF TO /bobf/if_tra_service_manager.
     ENDTRY.
 ```
 
-# Añadir registro nuevo
+# Añadir registro 
+
+Cuando se añaden hay que tener en cuenta si se insertados datos dependiente de un nodo superior, o no. En un BOPF todos los nodos dependen del ROOT, al menos es lo que he visto, por lo tanto
+añadir en el nodo ROOT es distinto que en un nodo "hijo". Se muestra los ejemplos en ambos
+
+## Nodo root
+
+Cuando solo inserto un registro, por ejemplo un registro de cabecera, instancio en un objeto la estructura de los datos combinados porque contiene todos los campos necesarios para pasarle al BOPF.
+En la combinada contiene también los campos transitorios que nunca se rellenan porque son calculados. Pero se tiene que usar la combinada para pasarla la clave a insertar.
+
+Si se inserta datos de una tabla entonces se usa el tipo tabla definido en el BOPF.
 
 ```tpl
- ET_MOD type /BOBF/T_FRW_MODIFICATION
-	
-" Se instancia el objeto donde se guardarán los datos de cabecera.    
-DATA(lo_header) = NEW zsat_bo_sc_orders_header( ).
-“ El puntero es para poder hacer corresponding
+ DATA lt_mod TYPE /bobf/t_frw_modification.
+
+    DATA(lo_header) = NEW zcar_bo_sc_header(  ).
     ASSIGN lo_header->* TO FIELD-SYMBOL(<ls_header>).
+    <ls_header> = CORRESPONDING #( is_header ).
+    <ls_header>-vbeln = iv_vbeln.
+    <ls_header>-key = /bobf/cl_frw_factory=>get_new_key( ).
 
- lv_mode = /bobf/if_frw_c=>sc_modify_create.
-      <ls_header> = CORRESPONDING #( is_header ).
-      <ls_header>-key = /bobf/cl_frw_factory=>get_new_key( ).
+    INSERT VALUE #( node = zif_car_bo_orders_c=>sc_node-root
+                          change_mode = /bobf/if_frw_c=>sc_modify_create
+                          key = lo_header->key
+                          data = lo_header )
+                 INTO TABLE lt_mod.
+```
+# Subnodo del ROOT
 
-INSERT VALUE #( node = zif_sat_orders_c=>sc_node-root
-                      change_mode = lv_mode
-                      key = lo_header->key
-                      data = lo_header )
-             INTO TABLE et_mod.
+Esto es cuando se añaden/modifican datos de un subnodo. Este ejemplo es la segunda parte del anterior. Ya qye en es
+
+```tpl
+    DATA(lo_positions) = NEW zcar_bo_i_positions(  ).
+    ASSIGN lo_positions->* TO FIELD-SYMBOL(<lt_positions>).
+    LOOP AT it_positions ASSIGNING FIELD-SYMBOL(<ls_positions>).
+      DATA(lv_tabix) = sy-tabix.
+      APPEND INITIAL LINE TO <lt_positions> ASSIGNING FIELD-SYMBOL(<ls_bo_positions>).
+      <ls_bo_positions> = CORRESPONDING #( <ls_positions> ).
+      <ls_bo_positions>-posnr = lv_tabix.
+      <ls_bo_positions>-key = /bobf/cl_frw_factory=>get_new_key( ).
+    ENDLOOP.
+
+    INSERT VALUE #( node = zif_car_bo_orders_c=>sc_node-root
+                change_mode = /bobf/if_frw_c=>sc_modify_create
+                key = lo_header->key
+                data = lo_positions
+                source_node = zif_car_bo_orders_c=>sc_node-root
+                association = zif_car_bo_orders_c=>sc_association-root-positions
+                source_key = lo_header->key ) INTO TABLE lt_mod.
 ```
 
 # Modificar registro
 
-```tpl
- DATA(lv_mode) = /bobf/if_frw_c=>sc_modify_update.
+Este ejemplo es como se haría en el nodo ROOT pero se puede extrapolar como se haría con el ejemplo de añadir en un nodo dependiente del ROOT.
 
-“ Hay que buscar el registro actualizar con las opciones QUERY del BOPF y actualizar los campos
+Cuando se modificar siempre hay que leer los datos previamente a través de la *querys* del BOPF. Una vez leído los datos se puede modificar.
+
+```tpl
 
 INSERT VALUE #( node = zif_sat_orders_c=>sc_node-root
-                      change_mode = lv_mode
+                      change_mode = /bobf/if_frw_c=>sc_modify_update
                       key = lo_header->key
                       data = lo_header )
              INTO TABLE et_mod.
 ```
 
-# Informar estructura de modificación para subnodo
 
-Esto es cuando se añaden/modifican datos de un subnodo.
-
-```tpl
- INSERT VALUE #( node = zif_atron_file_engine_c=>sc_node-root
-                change_mode = /bobf/if_frw_c=>sc_modify_create
-                key = lo_header->key
-                data = lo_content
-                source_node = zif_atron_file_engine_c=>sc_node-root
-                association = zif_atron_file_engine_c=>sc_association-root-content
-                source_key = lo_header->key ) INTO TABLE lt_mod.
-```
 # Modificar datos en BOPF
 
 Para que los datos del BOPF se graben primero se lanza el proceso de modificación, en este proceso es donde saltarían las validaciones propias.

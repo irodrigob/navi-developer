@@ -48,3 +48,11 @@ Ampliación de la sentencia INSERT de siempre pero con en este caso no es necesa
 ```tpl
 INSERT VALUE #( sign = 'I' option = 'EQ' low = abap_false ) INTO TABLE lt_params_sl.
 ```
+
+# Ejemplo usando corresponding
+
+Hacer un insert + corresponding en una tabla interna.
+
+```tpl
+ INSERT CORRESPONDING #( <ls_orders> ) INTO TABLE lt_positions.
+```

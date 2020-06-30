@@ -1,5 +1,5 @@
 ---
-title: Mapeo de camos
+title: Mapeo de campos
 description: Sentencias sobre mapeo de campos
 ---
 
