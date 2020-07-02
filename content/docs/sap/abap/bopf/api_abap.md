@@ -40,10 +40,8 @@ añadir en el nodo ROOT es distinto que en un nodo "hijo". Se muestra los ejempl
 
 ## Nodo root
 
-Cuando solo inserto un registro, por ejemplo un registro de cabecera, instancio en un objeto la estructura de los datos combinados porque contiene todos los campos necesarios para pasarle al BOPF.
-En la combinada contiene también los campos transitorios que nunca se rellenan porque son calculados. Pero se tiene que usar la combinada para pasarla la clave a insertar.
-
-Si se inserta datos de una tabla entonces se usa el tipo tabla definido en el BOPF.
+A la tabla donde se guarda los datos que se van a enviar siempre se guarda la estructura de datos. Esa estructura es siempre la combinada, la que tiene los datos persistentes y transitorios. El motivo es que esa estructura tiene el
+campo donde le indicaremos la clave del registro.
 
 ```tpl
  DATA lt_mod TYPE /bobf/t_frw_modification.
@@ -62,26 +60,29 @@ Si se inserta datos de una tabla entonces se usa el tipo tabla definido en el BO
 ```
 # Subnodo del ROOT
 
-Esto es cuando se añaden/modifican datos de un subnodo. Este ejemplo es la segunda parte del anterior. Ya qye en es
+Este ejemplo es cuando se añaden datos que dependen del root, además es un buen ejemplo para ver como se añaden datos de una tabla interna. Aquí de nuevo se usa la estructura combinada, que se instancia 
+por cada nuevo registro. Si no lo hicieramos insertaríamos siempre el último registro debido a los punteros de memoria.
 
 ```tpl
-    DATA(lo_positions) = NEW zcar_bo_i_positions(  ).
-    ASSIGN lo_positions->* TO FIELD-SYMBOL(<lt_positions>).
     LOOP AT it_positions ASSIGNING FIELD-SYMBOL(<ls_positions>).
       DATA(lv_tabix) = sy-tabix.
-      APPEND INITIAL LINE TO <lt_positions> ASSIGNING FIELD-SYMBOL(<ls_bo_positions>).
+
+      DATA(lo_positions) = NEW zcar_bo_sc_positions(  ).
+      ASSIGN lo_positions->* TO FIELD-SYMBOL(<ls_bo_positions>).
+
       <ls_bo_positions> = CORRESPONDING #( <ls_positions> ).
       <ls_bo_positions>-posnr = lv_tabix.
       <ls_bo_positions>-key = /bobf/cl_frw_factory=>get_new_key( ).
-    ENDLOOP.
 
-    INSERT VALUE #( node = zif_car_bo_orders_c=>sc_node-root
+      INSERT VALUE #( node = zif_car_bo_orders_c=>sc_node-positions
                 change_mode = /bobf/if_frw_c=>sc_modify_create
-                key = lo_header->key
+                key = <ls_bo_positions>-key
                 data = lo_positions
                 source_node = zif_car_bo_orders_c=>sc_node-root
                 association = zif_car_bo_orders_c=>sc_association-root-positions
                 source_key = lo_header->key ) INTO TABLE lt_mod.
+
+    ENDLOOP.
 ```
 
 # Modificar registro
