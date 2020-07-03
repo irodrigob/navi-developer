@@ -14,7 +14,7 @@ Cajón de desastre de cosas que no se muy como clasificar.
 
 Para saltarse la seguridad del usuario desarrollador
 
- ![Saltarse seguridad](/images/hugo/publicar_web/util_general_saltarse_seguridad_desarrollador.png)
+ ![Saltarse seguridad](/images/sap/abap/util_general_saltarse_seguridad_desarrollador.png)
 
  # URL
 
@@ -73,7 +73,7 @@ Cuando se esta previsualizando un spool se pone en la barra de comandos *PDF!* y
 
 # **Búsqueda de fechas**
 
-La madre del cordero para hacer búsquedas de fechas en el diccionaro o tablas internas.
+Resalto en negrita el título porque esta chuleta me ha ido muy bien para hacer búsqueda en tablas con campos de fecha inicio y fin.
 
 1. Registro válido para una fecha v_date: begda <= v_date and endda >= v_date
 2. Registro comprendido íntegramente en un periodo f_ini - f_fin: begda <= f_ini and endda >= f_fin
