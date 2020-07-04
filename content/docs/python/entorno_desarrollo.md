@@ -19,7 +19,10 @@ Aunque en la [documentación de VS Code](https://code.visualstudio.com/docs/pyth
 
 ## Jupyter Notebooks
 
-Hay muchos cursos donde explican en lenguaje con Jupyter Notebooks. Esto es un proyecto opensource que permite ejecutar código Python como si fuese un lenguaje estructurado.  Para utilizarlo hay que pulsar *CTRL+SHIFT+P* para activar la ventana de comandos y escribir lo *Create Blank*:
+Hay muchos cursos donde explican en lenguaje con Jupyter Notebooks. Esto es un proyecto opensource que permite ejecutar código Python como si fuese un lenguaje estructurado.  La ayuda oficial de como usarlo dentro del VS Code es [esta](https://code.visualstudio.com/docs/python/jupyter-support)
+
+
+Para utilizarlo hay que pulsar *CTRL+SHIFT+P* para activar la ventana de comandos y escribir lo *Create Blank*:
 
 ![Ejecutar Jupyter Notebook](/images/python/entorno_desarrollo/ejecutar_jupyter_notebook.png)
 
@@ -35,12 +38,23 @@ Ha preguntado si el servidor sería local o remote, he escogido remoto:
 
 ![Tipo de servidor](/images/python/entorno_desarrollo/jupyter_servidor_conectar.png)
 
-Luego ha preguntado que interprete de Python y a continuación ha comenzado hacer una instalación en local. Aquí no tengo pantallazos del proceso. Pero son pasos sencillos.
-*NOTA: Creo que como tengo instalado de antemano Anaconda, y al tener dos ambientes configurados que a la postre son como tener dos interpretes de Python independientes,  me ha salido la ventana a escoger el interprete: el oficial de Python y los datos de Anaconda.*
+Luego ha preguntado que interprete de Python:
+
+![Selector interprete](/images/python/entorno_desarrollo/jupyter_servidor_selector_interprete.png)
+
+ y a continuación ha comenzado hacer una instalación en local.
+
+*NOTA: Como tengo instalado de antemano Anaconda, y al tener dos ambientes configurados que a la postre son como tener dos interpretes de Python independientes,  me ha salido la ventana a escoger el interprete: el oficial de Python y los datos de Anaconda.*
+
+El interprete puede ser cambiando abriendo la ventana de comandos:
+
+![Selector interprete](/images/python/entorno_desarrollo/jupyter_servidor_cambiar_interprete.png)
 
 Una vez instalado todo en la parte superior derecha del VS Code se verá el servidor activo:
 
 ![Servidor funcionando](/images/python/entorno_desarrollo/jupyter_servidor_funcionando.png)
+
+Cuando volvamos abrir de nuevo el VSCode y abrir un editor del Jupyter Notebook el servidor arrancará automáticamente.
 
 
 # Anaconda
