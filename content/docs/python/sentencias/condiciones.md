@@ -15,6 +15,7 @@ Las condiciones son como en la mayoria de lenguajes
 * x is y --> *x es lo mismo que y*
 * x is not y --> *x no es lo mismo que y*
 * Operadores lógicos son: *and(y), or(o) y not(no)*
+* *IN* Devuelve si un cadena esta dentro de otra. El ejemplo de este operador se encuentra en la página de [cadenas](/docs/python/sentencias/cadenas.md)
 
 Para hacer bucles condiciones esta la sentencia *IF*. Ejemplo
 
@@ -29,8 +30,6 @@ Resultado:
 ```
 No son iguales
 ```
-
-**NOTA: Hay que dejar un espacio en blanco, o una tabulación al escribir la siguiente línea del IF o del ELSE porque sino da un error el interprete. Ya que tiene que estar identado respecto a la sentencia**
 
 Hay una sentencia que es *PASS* que se pondría después del *IF* o del *ELSE* para que no de error. Ejemplo:
 ```tpl

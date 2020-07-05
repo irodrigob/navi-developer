@@ -10,15 +10,24 @@ Sentencias propias del lenguaje.
 
 Como nota estoy usando para hacer las pruebas el Jupyter Notebook porque directamente pones el código y pulsando *CTRL+ENTER* se ejecuta y lo ves justo debajo.
 
-# Introducción
-
-Sentencias propias del lenguaje.
-
-Como nota estoy usando para hacer las pruebas el Jupyter Notebook porque directamente pones el código y pulsando *CTRL+ENTER* se ejecuta y lo ves justo debajo.
-
 # Comentarios
 
 Los comentarios se ponen con el carácter *#*
+
+# Código dentro de sentencias
+
+A diferencia de otros lenguajes que usán, o bien, carácteres especiales (como el *{}* como en Javascript), o bien, sentencias de inicio y fin para identificar el código que hay dentro de una sentencia: IF, FOR, etc.. En Python eso se hace
+identado, ya sea con un espacio en blanco o tabulacion, para indicar que las líneas de código pertenecen a una sentencia. Por ejemplo:
+
+```tpl
+if a <> b:
+    sentencia 1 del IF
+    sentencia 2 del IF
+
+setencia fuera del IF
+```
+
+Si no identamos entonces va a dar un mensaje de error porque se va pensar que la sentencia, en este caso el IF, no tiene código.
 
 # Visualizar datos
 
