@@ -1,6 +1,7 @@
 ---
 title: Finanzas
 description: Finanzas
+bookToc: true
 ---
 
 # Objetivo

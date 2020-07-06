@@ -1,6 +1,7 @@
 ---
 title: Logística
 description: Logística
+bookToc: true
 ---
 
 # Objetivo

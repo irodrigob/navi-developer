@@ -1,6 +1,7 @@
 ---
 title: API desde ABAP
 description: Como usar la API de los BOPF desde ABAP
+bookToc: true
 ---
 
 # Objetivo
@@ -129,7 +130,11 @@ En la clase de utilidades del BOPF que se esta indicada en el índice de la secc
           eo_message             = eo_message ).
 ```
 
-# Leer datos por el ID de nodo
+# Consulta de datos
+
+Cuando se tiene la clave del registro del nodo se tiene que usar el método *retrieve* o *retrieve_by_association*. 
+
+## Cuando se tiene el ID del registro
 
 *LT_HEADER* es la tabla interna que se indica en *Combinated table type*
 
@@ -141,9 +146,9 @@ En la clase de utilidades del BOPF que se esta indicada en el índice de la secc
 
 ```
 
-# Leer por asociación
+## Los datos de un subnodo
 
-En *node_key* se informa el nodo donde pertenece la clave que se le pasará a *IT_KEY*. En asociación se indica del nodo de la key a que nodo se quiere recuperar valores. En el ejemplo la key pertenece al nodo *root* y queremos que recuperar los datos asociados a dicha clave en el nodo *content*.
+En *node_key* se informa el nodo donde pertenece la clave que se le pasará *IT_KEY*. En asociación se indica del nodo de la key a que nodo se quiere recuperar valores. En el ejemplo la key pertenece al nodo *root* y queremos que recuperar los datos asociados a dicha clave en el nodo *content*.
 
 ```tpl
  mo_svc_mngr->retrieve_by_association(
@@ -155,3 +160,37 @@ En *node_key* se informa el nodo donde pertenece la clave que se le pasará a *I
         IMPORTING
            et_data                 = lt_content ).
 ```
+
+## Hacer consultas
+
+Al BOPF se puede hacer búsqueda por cualquier campo de los nodos que tenga. Para eso el nodo tiene que tener un tipo de búsqueda de tipo *Select by elements" en la pestaña *Query*.
+
+Los parámetros de búsqueda se pasan en el tipo tabla */BOBF/T_FRW_QUERY_SELPARAM* y el método ha usar es el *QUERY*. Ejemplo:
+
+```tpl
+  DATA lt_header_selparams TYPE /bobf/t_frw_query_selparam.
+
+  INSERT VALUE #( attribute_name = zif_car_bo_orders_c=>sc_node_attribute-root-vkorg sign = 'I' option = 'EQ' low = p_vkorg ) INTO TABLE lt_header_selparams.
+  INSERT VALUE #( attribute_name = zif_car_bo_orders_c=>sc_node_attribute-root-vtweg sign = 'I' option = 'EQ' low = p_vtweg ) INTO TABLE lt_header_selparams.
+  INSERT VALUE #( attribute_name = zif_car_bo_orders_c=>sc_node_attribute-root-spart sign = 'I' option = 'EQ' low = p_spart ) INTO TABLE lt_header_selparams.
+
+  mo_svc_mngr->query(
+  EXPORTING
+    iv_query_key            = zif_car_bo_orders_c=>sc_query-root-select_by_elements
+    it_selection_parameters = lt_header_selparams
+    iv_fill_data            = abap_true
+  IMPORTING
+    et_data                 = et_header ).
+```
+
+El parámetro *IV_FILL_DATA* tiene que estar *TRUE* para que nos devuelva datos en el parámetro *ET_DATA*. La tabla interna donde se almacenan los datos debe ser del tipo *Combinated table type* que hay definida en el nodo.
+Si solo queremos los ID de los registros se haría de la siguiente manera:
+
+```tpl
+ mo_svc_mngr->query( EXPORTING iv_query_key            = zif_car_bo_orders_c=>sc_query-positions-select_by_elements
+                                      it_selection_parameters = it_positions_selparams
+                                      iv_fill_data            = abap_false
+                            IMPORTING et_key = DATA(lt_key_pos) ).
+```
+
+El parámetro de entrada *IS_QUERY_OPTIONS* se le puede indicar los campos de ordenación, número de registros y opciones de páginación.

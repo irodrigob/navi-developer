@@ -1,6 +1,7 @@
 ---
 title: Basic component
 description: Basic component
+bookToc: true
 ---
 
 # Lista

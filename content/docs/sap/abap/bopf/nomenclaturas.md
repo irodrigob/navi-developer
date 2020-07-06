@@ -1,7 +1,7 @@
 ---
 title: Nomenclaturas
 description: Nomenclaturas
-weight: 20
+bookToc: true
 ---
 
 # Objetivo

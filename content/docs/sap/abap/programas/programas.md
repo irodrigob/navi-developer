@@ -2,6 +2,7 @@
 title: Lista de programas
 description: Lista de programas
 bookCollapseSection: true
+bookToc: true
 ---
 
 # Lista

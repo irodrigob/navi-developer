@@ -1,6 +1,7 @@
 ---
 title: Condiciones
 description: Sentencias sobre condiciones
+bookToc: true
 ---
 
 # Introducción

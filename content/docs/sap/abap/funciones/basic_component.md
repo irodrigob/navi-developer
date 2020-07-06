@@ -1,6 +1,7 @@
 ---
 title: Basic Component
 description: Basic Component
+bookToc: true
 ---
 
 # Objetivo

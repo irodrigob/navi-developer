@@ -1,6 +1,7 @@
 ---
 title: Filtros
 description: Sentencias sobre el filtrado de datos
+bookToc: true
 ---
 
 # Introducción

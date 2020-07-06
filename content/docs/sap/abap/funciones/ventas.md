@@ -1,6 +1,7 @@
 ---
 title: Ventas
 description: Ventas
+bookToc: true
 ---
 
 # Objetivo

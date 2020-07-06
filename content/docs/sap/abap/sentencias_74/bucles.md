@@ -1,6 +1,7 @@
 ---
 title: Bucles
 description: Sentencias sobre proceso de tablas internas
+bookToc: true
 ---
 
 # Introducción

@@ -1,6 +1,7 @@
 ---
 title: Lectura tablas del diccionario
 description: Formas nuevas de leer en las tablas del diccionario
+bookToc: true
 ---
 
 # Introducción

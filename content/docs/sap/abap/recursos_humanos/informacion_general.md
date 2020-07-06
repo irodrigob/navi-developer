@@ -1,6 +1,7 @@
 ---
 title: Información general
 description: Información general
+bookToc: true
 ---
 
 # Objetivo

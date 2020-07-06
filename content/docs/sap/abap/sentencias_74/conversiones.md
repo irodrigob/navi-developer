@@ -1,6 +1,7 @@
 ---
 title: Conversiones
 description: Sentencias sobre conversión de datos
+bookToc: true
 ---
 
 # Introducción
