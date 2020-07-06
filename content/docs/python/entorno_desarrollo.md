@@ -44,7 +44,7 @@ Luego ha preguntado que interprete de Python:
 
  y a continuación ha comenzado hacer una instalación en local.
 
-*NOTA: Como tengo instalado de antemano Anaconda, y al tener dos ambientes configurados que a la postre son como tener dos interpretes de Python independientes,  me ha salido la ventana a escoger el interprete: el oficial de Python y los datos de Anaconda.*
+*NOTA: Como tengo instalado de antemano Anaconda, y al tener dos entornos configurados que a la postre son como tener dos interpretes de Python independientes,  me ha salido la ventana a escoger el interprete: el oficial de Python y los datos de Anaconda.*
 
 El interprete puede ser cambiando abriendo la ventana de comandos:
 

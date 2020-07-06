@@ -14,6 +14,17 @@ Como nota estoy usando para hacer las pruebas el Jupyter Notebook porque directa
 
 Los comentarios se ponen con el carácter *#*
 
+# Uso del ":" para sentencia con bloques de código
+
+En las sentencias que tienen dentro de ellas bloques de código: *IF*, *WHILE*, *FOR*,etc, hay que poner el carácter ":" al final de la sentencia. Ejemplo:
+
+```tpl
+if condicion 1 == condicion2: 
+
+while n < 10:
+```
+
+
 # Código dentro de sentencias
 
 A diferencia de otros lenguajes que usán, o bien, carácteres especiales (como el *{}* como en Javascript), o bien, sentencias de inicio y fin para identificar el código que hay dentro de una sentencia: IF, FOR, etc.. En Python eso se hace
