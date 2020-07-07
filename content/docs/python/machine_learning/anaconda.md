@@ -58,6 +58,7 @@ Y veremos que a la derecha sale el entorno seleccionado.
 
 # Instalar libreria
 
+## Vía consola
 La libería de TensorFlow no viene instalado. Vamos a instalar en el entorno de *test* y vía consola.
 
 ```tpl
@@ -71,3 +72,22 @@ Sale información sobre lo que se va a instalr_
 Importante en la imagen se ve que va instalar TensorFlow en el entorno *test*, el activo. Si tenemos otro entorno que lo queramos instalar hay que activar dicho entorno e instalarlo.
 
 Se le pulsa que *y* y comenzará a realizar la instalación. Nos irá diciendo del progreso de instalación pero no tarda mucho. Con eso ya se puede usar el TensorFlow.
+
+## Vía entorno gráfico
+
+Vamos a instalar la librería *Scikit lear(sklearn)* para ello primero hay activar el entorno donde la queremos, ir a la pestaña de *Environments*, seleccionar los paquetes no instaldos y filtrar por *scikit*:
+
+![Instalacion mediante entorno gráfico](/images/python/machine_learning/anaconda/instalacion_libreria_entorno_grafico.png)
+
+En la imagen ya se ha marcado el paquete que nos interesa y pulsar el botón de *Apply* situado en la parte inferior derecha.
+**NOTA: Al marca los tres paquetes de *scifi* no hay manera que se instalen por eso solo marco uno**
+
+![Iniciar instalación](/images/python/machine_learning/anaconda/iniciar_instalacion_paquete_entorno_grafico.png)
+
+Si hay dependencias con otros paquetes nos pedirá que confirmemos los otros paquetes:
+
+![Ventana dependencias](/images/python/machine_learning/anaconda/instalacion_grafica_ventana_dependencias.png)
+
+Se pulsar el botón *Apply* para iniciar la instalación. Una vez instalado el paquete desaparecerá de la lista de paquetes no instalados.
+
+También he instalado el paquete *scikit-image*. El otro paquete asociado *scikit-rf* da error al instalarlo.
