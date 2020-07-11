@@ -1,5 +1,6 @@
 ---
 title: Condiciones
+description: Condiciones
 ---
 
 # Condiciones

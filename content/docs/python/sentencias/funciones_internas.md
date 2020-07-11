@@ -1,5 +1,6 @@
 ---
 title: Funciones internas
+description: Funciones internas
 ---
 
 # Funciones internas

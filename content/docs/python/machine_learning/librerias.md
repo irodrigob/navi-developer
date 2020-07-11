@@ -1,11 +1,14 @@
 ---
 title: Librerias
+description: Librerias
 weight: 20
 ---
 
 # Introducción
 
-Librerias para usar 
+Librerias para poder usar el Machine Learning.
+
+Los pasos para instalar las librerías esta explicado en la página de [Anaconda](/docs/python/anaconda.md).
 
 # Numpy
 
@@ -28,3 +31,22 @@ Según la Wikipedia: *Scikit-learn es una biblioteca para aprendizaje automátic
 ## Instalación
 
 Por defecto no se encuentra instalada. En la página que habla [Anaconda](/docs/python/anaconda.md) en el apartado de instalación de paquetes mediante entorno gráfico explica como se hace la instalación.
+
+# Graphviz
+
+## ¿Qué és?
+
+Según la Wikipedia: *Graphviz es un conjunto de herramientas de software para el diseño de diagramas definido en el lenguaje descriptivo DOT.​ Fue desarrollado por AT&T Labs​ y liberado como software libre con licencie tipo Eclipse.​*
+
+## Instalación
+
+La instalación más sencilla es hacerlo a través de la interface gráfica de Anaconda:
+
+![Libreria Graphviz](/images/python/machine_learning/anaconda/libreria_grahviz.png)
+
+Y el paquete:
+
+![Libreria Graphviz 2](/images/python/machine_learning/anaconda/libreria_grahviz2.png)
+
+Para que funcione correctamente la libreria.
+

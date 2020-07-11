@@ -1,5 +1,6 @@
 ---
 title: Captura de excepciones
+description: Captura de excepciones
 ---
 
 # Captura excepciones

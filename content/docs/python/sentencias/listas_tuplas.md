@@ -1,5 +1,6 @@
 ---
 title: Listas y tuplas
+description: Listas y tuplas
 ---
 
 # Listas y tuplas

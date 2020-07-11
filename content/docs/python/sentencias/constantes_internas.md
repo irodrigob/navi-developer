@@ -1,5 +1,6 @@
 ---
 title: Constantes internas
+description: Constantes internas
 ---
 
 # Iteracciones

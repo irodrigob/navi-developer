@@ -1,5 +1,6 @@
 ---
-title: Usar liberias
+title: Usar librerias
+description: Usar librerias
 ---
 
 # Usar librerias
@@ -27,4 +28,22 @@ El siguiente ejemplo se recupera la libreria de regresión de KNN:
 # Regresor de KNN o vecinos cercanos
 from sklearn.neighbors import KNeighborsRegressor
 ```
+
+### Múltiple librerias de un paquete
+
+Es posible recuperar varías librerías de un solo paquete:
+
+```tpl
+from sklearn.datasets import load_breast_cancer, load_iris
+```
+
+# Importar libreria asignándole un alias
+
+Es posible importar una librería asignándole un alias, por ejemplo, para darle un nombre más sencillo:
+
+```tpl
+import numpy as np
+```
+
+
 

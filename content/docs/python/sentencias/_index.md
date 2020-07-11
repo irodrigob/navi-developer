@@ -1,5 +1,6 @@
 ---
 title: Sentencias
+description: Sentencias
 weight: 20
 bookCollapseSection: false
 ---

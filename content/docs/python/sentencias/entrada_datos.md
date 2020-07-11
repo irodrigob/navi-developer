@@ -1,5 +1,6 @@
 ---
 title: Entrada de datos
+description: Entrada de datos
 weight: 20
 ---
 
