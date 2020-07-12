@@ -50,3 +50,12 @@ Y el paquete:
 
 Para que funcione correctamente la libreria.
 
+# Matplotlib
+
+## ¿Qué és?
+
+Según la Wikipedia: *Matplotlib es una biblioteca para la generación de gráficos a partir de datos contenidos en listas o arrays en el lenguaje de programación Python y su extensión matemática NumPy. Proporciona una API, pylab, diseñada para recordar a la de MATLAB.*
+
+## Instalación
+
+Esta libreria ya viene instalada por defecto con Anaconda y no es necesario realizar ningún instalación
