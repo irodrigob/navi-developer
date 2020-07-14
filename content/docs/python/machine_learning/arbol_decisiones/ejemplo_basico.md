@@ -174,6 +174,9 @@ En esta imagen se ve como se ha realizado la clasificación:
 Los recuadros azules son los sobreajustes que produce el algoritmo al intentar clasificar alguno de los elementos, pero que 
 esto a futuro dará falsos positivos.
 
-Ajustando el parámetro *max_depth=3* vemos que esas líneas desparecen:
+Ajustando el parámetro *max_depth=3* vemos que algunas de las líneas desparecen:
 
 ![Representación sin sobreajuste](/images/python/machine_learning/arbol_decisiones/ejempo_arbol_decision_sinsobreajuste.png)
+
+
+En el siguiente [artículo](/docs/python/machine_learning/arbol_decisiones/explicacion_sobreajuste.md) se intenta explica un poco mejor que es el sobreajuste.
