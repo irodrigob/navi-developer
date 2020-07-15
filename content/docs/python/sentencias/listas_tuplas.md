@@ -7,7 +7,7 @@ description: Listas y tuplas
 
 Las listas son las que usan [] y las tuplas(). Ambas sirven para guardar datos. Y ambas están indexadas por 0, es decir, al primer registro se accede por el valor 0.
 
-Los string en si mismos son listas como se explica en pagína de [cadenas](/docs/python/sentencias/cadenas.md).
+Los string en si mismos son listas como se explica en pagína de [cadenas](/docs/python/sentencias/cadenas.md). Pero mientras que en la cadenas los valores son carácteres en una lista/tupla puede contener cualquier valor.
 
 Ejemplo de inicialización:
 
@@ -110,6 +110,41 @@ Resultado:
 ```
 Valores antes: [8, 9, 10, 11, 12]
 Valores después: [8, 9, 10, 11, 12, 13]
+```
+
+### Sublistas
+
+Es posible tener una sublista dentro de una lista ejemplo:
+
+```tpl
+lista=["valor 1",2, 3.4,["subvalor", 10]]
+print("Contenido ", lista)
+```
+Resultado:
+```
+Contenido  ['valor 1', 2, 3.4, ['subvalor', 10]]
+```
+
+### Segmentos
+
+Igual que en las cadenas también se puede acceder a segmentos. Ejemplo:
+```tpl
+lista=[1,2,3,4,5,6]
+print("Contenido ", lista[3:5])
+```
+Resultado:
+```
+Contenido  [4, 5]
+```
+
+Si no se pone el primer valor del segmento se comienza a leer desde el primer valor. Ejemplo:
+```tpl
+lista=[1,2,3,4,5,6]
+print("Contenido ", lista[:5])
+```
+Resultado:
+```
+Contenido  [1, 2, 3, 4, 5]
 ```
 
 

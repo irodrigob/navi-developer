@@ -59,3 +59,14 @@ Según la Wikipedia: *Matplotlib es una biblioteca para la generación de gráfi
 ## Instalación
 
 Esta libreria ya viene instalada por defecto con Anaconda y no es necesario realizar ningún instalación
+
+# SVM (Support Vector Machine / Maquina de vectores de soporte)
+
+## ¿Qué és?
+
+Según la Wikipedia: *Las máquinas de vectores de soporte o máquinas de vector soporte (Support Vector Machines, SVMs) son un conjunto de algoritmos de aprendizaje supervisado desarrollados por Vladimir Vapnik y su equipo en los laboratorios AT&T.*
+*Estos métodos están propiamente relacionados con problemas de clasificación y regresión. Dado un conjunto de ejemplos de entrenamiento (de muestras) podemos etiquetar las clases y entrenar una SVM para construir un modelo que prediga la clase de una nueva muestra.*
+
+## Instalación
+
+Viene incluido en la librería *Scikit learn(Sklearn)*
