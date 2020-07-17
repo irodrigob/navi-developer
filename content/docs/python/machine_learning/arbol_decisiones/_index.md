@@ -11,6 +11,6 @@ Para oider usar los algoritmos de regresion líneas en el ambiente de anaconda t
 
 # Secciones
 
-Las sección son las siguientes:
+Las secciones son las siguientes:
 
 {{<section>}}

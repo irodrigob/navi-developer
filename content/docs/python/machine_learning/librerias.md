@@ -70,3 +70,17 @@ Según la Wikipedia: *Las máquinas de vectores de soporte o máquinas de vector
 ## Instalación
 
 Viene incluido en la librería *Scikit learn(Sklearn)*
+
+# NLTK
+
+## ¿Qué és?
+
+Según la Wikipedia: *El kit de herramientas de lenguaje natural, o más comúnmente NLTK, es un conjunto de bibliotecas y programas para el procesamiento del lenguaje natural (PLN) simbólico y estadísticos para el lenguaje de programación Python.*
+
+Lo que hace el NLTK es eliminar lo que se llaman *stop words*. *stop words* son palabras mudas, o que no aportan valor para los algoritmos. Palabras como: en, la, el, una, etc. Son palabras que normalmente los algoritmos de búsqueda suelen ignorar.
+
+## Instalación
+
+La librería no esta instalada por defecto, lo más fácil es instalarla a través del anaconda navigator:
+
+![Libreria NLTK](/images/python/machine_learning/anaconda/libreria_nltk.png)

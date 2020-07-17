@@ -1,6 +1,7 @@
 ---
 title: Machine learning
-
+description: Machine learning
+bookCollapseSection: true
 ---
 
 # Introducción

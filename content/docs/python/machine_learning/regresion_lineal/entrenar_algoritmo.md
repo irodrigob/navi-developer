@@ -5,7 +5,7 @@ description: Ejemplo de entrenamiento de algoritmo de regresion lineal
 
 # Introducción
 
-Ejemplo extraído del video [Machine Learning episodio 2 Algoritmos de regresión](https://www.youtube.com/watch?v=38rBECdCv3A&t)
+Ejemplo extraído del video [Machine Learning episodio 2. Algoritmos de regresión](https://www.youtube.com/watch?v=38rBECdCv3A&t)
 
 El ejemplo esta creado el *Jupiter Notebool* y se irá poniendo el código de las distintas celdas
 
