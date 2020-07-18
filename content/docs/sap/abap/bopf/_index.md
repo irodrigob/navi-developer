@@ -2,6 +2,7 @@
 title: BOPF
 description: BOPF
 weight: 20
+bookCollapseSection: true
 ---
 
 # Objetivo

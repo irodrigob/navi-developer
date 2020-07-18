@@ -1,7 +1,7 @@
 ---
 title: CDS
 description: Core Data Services
-weight: 20
+bookCollapseSection: true
 ---
 
 # Objetivo

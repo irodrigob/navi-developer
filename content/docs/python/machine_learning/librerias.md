@@ -84,3 +84,15 @@ Lo que hace el NLTK es eliminar lo que se llaman *stop words*. *stop words* son 
 La librería no esta instalada por defecto, lo más fácil es instalarla a través del anaconda navigator:
 
 ![Libreria NLTK](/images/python/machine_learning/anaconda/libreria_nltk.png)
+
+# KMeans
+
+## ¿Qué és?
+
+Según la Wikipedia: *Es un método de agrupamiento, que tiene como objetivo la partición de un conjunto de n observaciones en k grupos en el que cada observación pertenece al grupo cuyo valor medio es más cercano.*
+
+KMens se utiliza en algoritmo de aprendizaje no supervisado.
+
+## Instalación
+
+**PENDIENTE**

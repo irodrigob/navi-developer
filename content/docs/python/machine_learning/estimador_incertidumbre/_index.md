@@ -5,7 +5,7 @@ description: Ejemplo sobre los estimadores de incertidumbre
 
 # Introducción
 
-Ejemplo extraído del video [Machine Learning episodio 5. Estimador de incertidumbre](https://www.youtube.com/watch?v=2A7Hz3RjhIY&t). Aquí hay imagenes obtenidos del video para clarificar tal como lo hace en el video.
+Ejemplo extraído del video [Machine Learning episodio 5. Estimador de incertidumbre](https://www.youtube.com/watch?v=2A7Hz3RjhIY&t). Se pondrán imagens obtenidas del video para explicar mejor el funcionamiento tal como lo hace en el video.
 
 El ejemplo esta creado el *Jupiter Notebool* y se irá poniendo el código de las distintas celdas
 
