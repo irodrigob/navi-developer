@@ -69,7 +69,7 @@ Según la Wikipedia: *Las máquinas de vectores de soporte o máquinas de vector
 
 ## Instalación
 
-Viene incluido en la librería *Scikit learn(Sklearn)*
+Viene incluida en la librería *Scikit learn(Sklearn)*
 
 # NLTK
 
@@ -95,4 +95,4 @@ KMens se utiliza en algoritmo de aprendizaje no supervisado.
 
 ## Instalación
 
-**PENDIENTE**
+Viene incluida en la librería *Scikit learn(Sklearn)*
