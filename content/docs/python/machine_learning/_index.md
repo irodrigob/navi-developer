@@ -1,12 +1,12 @@
 ---
 title: Machine learning
 description: Machine learning
-bookCollapseSection: true
+bookCollapseSection: false
 ---
 
 # Introducción
 
-Toda sobre machine learning en Python
+Todo sobre machine learning en Python
 
 # Secciones
 

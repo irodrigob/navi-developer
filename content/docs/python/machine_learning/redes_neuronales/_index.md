@@ -13,6 +13,8 @@ Las redes nacen para poder emular el cerebro humano. Lo que se intentar es const
 
 # Como funciona el algoritmo
 
+Ejemplo extraído de [Machine Learning episodio 6. Redes neuronales](https://www.youtube.com/watch?v=7wC9YDImpyY). Se pondrán imagens obtenidas del video para explicar mejor el funcionamiento tal como lo hace en el video.
+
 En la siguiente imagen tenemos un ejemplo de diagrama de una red neuronal:
 
 ![Diagrama red neuronal](/images/python/machine_learning/redes_neuronales/diagrama_red_neuronal.png)

@@ -23,29 +23,29 @@ En la imagen queda claro que hay dos grupos diferencias pero esto el algoritmo n
 
 Entonces lo que hace el algoritmo es crear un puntos aleatorios llamados *centroides*:
 
-![Centroides](/images/python/machine_learning/algoritmo_aprendiza_no_supervisado/datos_centroides.png)
+![Centroides](/images/python/machine_learning/algoritmo_aprendizaje_no_supervisado/datos_centroides.png)
 
 Entonces lo que hace el algorimto es ver que puntos están mas cercanos a los centroides. Con ello sacará el promedio de los puntos que están más cercanos a los centroides, en la siguiente iteracción se va a mover el centroide al promedio que saco en el paso anterior.
 
 En la siguiente imagen se mostraría que datos estarían más cercanos para cada centroide.
 
-![Datos de cada centroide](/images/python/machine_learning/algoritmo_aprendiza_no_supervisado/datos_cada_centroide.png)
+![Datos de cada centroide](/images/python/machine_learning/algoritmo_aprendizaje_no_supervisado/datos_cada_centroide.png)
 
 Ahora con el promedio obtenido reajuste los centroides:
 
-![Reajuste centroides](/images/python/machine_learning/algoritmo_aprendiza_no_supervisado/datos_reajuste_centroides.png)
+![Reajuste centroides](/images/python/machine_learning/algoritmo_aprendizaje_no_supervisado/datos_reajuste_centroides.png)
 
 Estas iteracciones las va ir repitiendo hasta que los centroides no se muevan o se llege al final de las iteracciones. Lo ideal sería que una ha terminado todas las iteracciones los centroides quedarán en las siguientes posiciones:
 
-![Posición ideal centroides](/images/python/machine_learning/algoritmo_aprendiza_no_supervisado/datos_centroides_pos_ideal.png)
+![Posición ideal centroides](/images/python/machine_learning/algoritmo_aprendizaje_no_supervisado/datos_centroides_pos_ideal.png)
 
 Con lo cual los grupos se crearían de la siguiente manera:
 
-![Grupos posicion ideal centroides](/images/python/machine_learning/algoritmo_aprendiza_no_supervisado/datos_grupos_centroides_pos_ideal.png)
+![Grupos posicion ideal centroides](/images/python/machine_learning/algoritmo_aprendizaje_no_supervisado/datos_grupos_centroides_pos_ideal.png)
 
 Como los datos no siempre van estar en esta posición ideal hay que tener los datos estén correctos y hacer muchas pruebas de ensaño y error para ir ajustando el número de grupos a clasificar.
 
-![](/images/python/machine_learning/algoritmo_aprendiza_no_supervisado/)
+![](/images/python/machine_learning/algoritmo_aprendizaje_no_supervisado/)
 
 # Secciones
 

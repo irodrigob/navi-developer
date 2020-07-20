@@ -5,7 +5,7 @@ description: Ejemplo de redes neuronales usando Sklearn
 
 # Introducción
 
-Ejemplo extraído del video [Machine Learning episodio 6. Redes neuronales](https://www.youtube.com/watch?v=7wC9YDImpyY)
+Ejemplo extraído del video [Machine Learning episodio 6. Redes neuronales](https://www.youtube.com/watch?v=7wC9YDImpyY).
 
 El ejemplo esta creado el *Jupiter Notebool* y se irá poniendo el código de las distintas celdas.
 
