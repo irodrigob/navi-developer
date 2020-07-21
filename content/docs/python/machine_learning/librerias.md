@@ -96,3 +96,32 @@ KMens se utiliza en algoritmo de aprendizaje no supervisado.
 ## Instalación
 
 Viene incluida en la librería *Scikit learn(Sklearn)*
+
+# PCA(Principal component Analysis)
+
+## ¿Qué és?
+
+Según la Wikipedia: *En estadística, el análisis de componentes principales (en español ACP, en inglés, PCA) es una técnica utilizada para describir un conjunto de datos en términos de nuevas variables («componentes») no correlacionadas. Los componentes se ordenan por la cantidad de varianza original que describen, por lo que la técnica es útil para reducir la dimensionalidad de un conjunto de datos.*
+
+Esta librería se usa para reducir ruido de los datos que se van a procesar y ver los datos de multiples dimension en dos dimensiones para poder analizarlos.
+
+## Instalación
+
+Viene incluida en la librería *Scikit learn(Sklearn)*
+
+# Mglearn
+
+## ¿Qué és?
+
+Realmente no es una librería, es una paquete que tiene funciones de ayuda para el libro *Introduction to Machine Learning with Python*. En la siguiente [dirección esta el detalle de dicho paquete](https://github.com/amueller/mglearn)
+
+## Instalación
+
+La instalación hay que hacerla a través del paquete *PIP*, que ya viene instalado. Para hacerlo ha hacer lo siguiente:
+
+```tpl
+conda activate <nombre entorno>
+pip install mglearn
+```
+
+Con esto ya se puede usar la librería o paquete.

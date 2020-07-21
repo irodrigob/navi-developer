@@ -1,7 +1,7 @@
 ---
 title: Machine learning
 description: Machine learning
-bookCollapseSection: false
+bookCollapseSection: true
 ---
 
 # Introducción
