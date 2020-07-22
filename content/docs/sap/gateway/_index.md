@@ -1,7 +1,7 @@
 ---
 title: Gateway
 description: Gateway
-bookCollapseSection: false
+bookCollapseSection: true
 ---
 
 # Objetivo

@@ -1,12 +1,12 @@
 ---
-title: Librerias
-description: Librerias
+title: Librerias y paquetes
+description: Librerias y paquetes
 weight: 20
 ---
 
 # Introducción
 
-Librerias para poder usar el Machine Learning.
+Librerias y pawuetes para poder usar el Machine Learning.
 
 Los pasos para instalar las librerías esta explicado en la página de [Anaconda](/docs/python/anaconda.md).
 
@@ -18,7 +18,7 @@ Según la Wikipedia: *NumPy es una extensión de Python, que le agrega mayor sop
 
 ## Instalación
 
-No se instalar porque viene incluido con Anaconda:
+No se instala porque viene incluido con Anaconda:
 
 ![Numpy instalado por defecto](/images/python/machine_learning/anaconda/numpy_viene_instalado.png)
 
@@ -125,3 +125,33 @@ pip install mglearn
 ```
 
 Con esto ya se puede usar la librería o paquete.
+
+# Mglearn
+
+## ¿Qué és?
+
+Explicación extráido de [Bioinformatics at COMAV](https://bioinf.comav.upv.es/courses/linux/python/pandas.html)
+
+Pandas es un paquete de Python que proporciona estructuras de datos similares a los dataframes de R. Pandas depende de Numpy, la librería que añade un potente tipo matricial a Python. Los principales tipos de datos que pueden representarse con pandas son:
+
+* Datos tabulares con columnas de tipo heterogéneo con etiquetas en columnas y filas.
+* Series temporales.
+
+Pandas proporciona herramientas que permiten:
+
+* leer y escribir datos en diferentes formatos: CSV, Microsoft Excel, bases SQL y formato HDF5
+* seleccionar y filtrar de manera sencilla tablas de datos en función de posición, valor o etiquetas
+* fusionar y unir datos
+* transformar datos aplicando funciones tanto en global como por ventanas
+* manipulación de series temporales
+* hacer gráficas
+
+En pandas existen tres tipos básicos de objetos todos ellos basados a su vez en Numpy:
+
+* Series (listas, 1D),
+* DataFrame (tablas, 2D) y
+* Panels (tablas 3D).
+
+## Instalación
+
+Viene incluído en la librería *Numpy*

@@ -147,6 +147,32 @@ Resultado:
 Contenido  [1, 2, 3, 4, 5]
 ```
 
+Si queremos leer todos los valores menos el último se puede hacer de la siguiente manera:
+```tpl
+lista=[1,2,3,4,5,6]
+print("Contenido ", lista[:-1])
+```
+Resultado:
+```
+Contenido  [1, 2, 3, 4, 5]
+```
+
+Si ponemos menos saldría *-2*
+```
+Contenido  [1, 2, 3, 4]
+```
+Y así hasta el inicio del vector. 
+
+Si queremos leer el último registro se puede hacer así:
+```tpl
+lista=[1,2,3,4,5,6]
+print("Contenido ", lista[-1])
+```
+Resultado:
+```
+Contenido  6
+```
+
 
 ## Tuplas
 

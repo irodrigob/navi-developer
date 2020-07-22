@@ -5,7 +5,7 @@ description: Procesamiento de datos
 
 # Introducción
 
-Todo sobre el procesamiento de datos
+Todo sobre el procesamiento de datos.
 
 # Objetivo
 
