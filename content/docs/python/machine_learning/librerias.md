@@ -155,3 +155,13 @@ En pandas existen tres tipos básicos de objetos todos ellos basados a su vez en
 ## Instalación
 
 Viene incluído en la librería *Numpy*
+
+# Mglearn
+
+## ¿Qué és?
+
+Según la Wikipedia: *TensorFlow es una biblioteca de código abierto para aprendizaje automático a través de un rango de tareas, y desarrollado por Google para satisfacer sus necesidades de sistemas capaces de construir y entrenar redes neuronales para detectar y descifrar patrones y correlaciones, análogos al aprendizaje y razonamiento usados por los humanos.*
+
+## Instalación
+
+Tensor flow no viene instalado por defecto pero justo en el página de [Anaconda](/docs/python/anaconda.md) en la sección de instalación de librerías, se explica como instalar Tensor Flow a modo de ejemplo.

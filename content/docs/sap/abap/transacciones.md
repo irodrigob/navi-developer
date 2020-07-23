@@ -71,6 +71,7 @@ ST12 | Hibrido entre la SAT y ST05 para temas de rendimiento ya sea web, program
 Transacción | Descripción
 --------|--------
 RSO2 | Creacion extractores para BW
+RSRT | Ejecutar cubos desde R/3. Si necesitas de usar las herramientas externas
 
 
 {{< /tab >}}

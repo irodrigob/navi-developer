@@ -1,11 +1,11 @@
 ---
-title: Set de datos propios
-description: Set de datos propios
+title: Tensor Flow
+description: Tensor Flow
 ---
 
 # Introducción
 
-Todo sobre disponer de tu propio set de datos para usarla en IA.
+Todo sobre Tensor Flow.
 
 # Objetivo
 
