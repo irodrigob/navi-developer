@@ -11,6 +11,8 @@ El ejemplo esta creado el *Jupiter Notebool* y se irá poniendo el código de la
 
 # Código
 
+[Código fuente descargable](/docs/python/machine_learning/regresion_lineal/entrenar_algoritmos_regression_lineal.ipynb) 
+
 Se cargan las librerias
 ```tpl
 # Regresor de KNN o vecinos cercanos

@@ -32,6 +32,8 @@ Este nueva dirección la va a llamar *PCA2*. Lo siguiente que hará PCA es tomar
 
 # Código
 
+[Código fuente descargable](/docs/python/machine_learning/proc_datos/procesamiento_datos_pca.ipynb) 
+
 ```tpl
 import sklearn
 # Librería para representar gráficamente los datos

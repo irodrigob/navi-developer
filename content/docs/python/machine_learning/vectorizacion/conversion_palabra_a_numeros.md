@@ -51,6 +51,8 @@ es usar la  [libreria NLTK](/docs/python/machine_learning/librerias.md) para ell
 
 # Código
 
+[Código fuente descargable](/docs/python/machine_learning/vectorizacion/vectorizacion_palabras.ipynb) 
+
 Librerias de ejemplo
 ```tpl
 import sklearn 

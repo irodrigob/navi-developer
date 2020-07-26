@@ -11,6 +11,8 @@ El ejemplo esta creado el *Jupiter Notebool* y se irá poniendo el código de la
 
 # Código
 
+[Código fuente descargable](/docs/python/machine_learning/arbol_decisiones/arbol_decisiones.ipynb) 
+
 Carga de librerías
 ```tpl
 # Clasificador de arbol de decisiones

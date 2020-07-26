@@ -20,6 +20,8 @@ Este tipo de algoritmo es mucho de prueba y error e ir interpretando los datos p
 
 # Código
 
+[Código fuente descargable](/docs/python/machine_learning/alg_aprend_no_supe/ejemplo_kmeans.ipynb) 
+
 ```tpl
 # Algoritmo aprendizaje no supervisado
 from sklearn.cluster import KMeans

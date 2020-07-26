@@ -18,6 +18,8 @@ El uso del SVM es útil para poder escoger el algoritmo que nos va mejor a la ho
 
 # Codigo
 
+[Código fuente descargable](/docs/python/machine_learning/estimador_incertidumbre/estados_incertidumbres.ipynb) 
+
 El primer paso es siempre cargar las librerías.
 ```tpl
 # Set de datos

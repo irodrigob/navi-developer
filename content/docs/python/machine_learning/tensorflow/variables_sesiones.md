@@ -5,14 +5,16 @@ description: Variables y sesiones
 
 # Introducción
 
-Ejemplo extraído del video [TensorFlow: Variables y Sesiones](https://www.youtube.com/watch?v=XM4HpqTBi5E). De este mismo video se extraerán fotos para aclarar mejor conceptos tal como hace el video.
+Ejemplo extraído del video [TensorFlow: Variables y Sesiones](https://www.youtube.com/watch?v=XM4HpqTBi5E). 
 
 El ejemplo esta creado el *Jupiter Notebool* y se irá poniendo el código de las distintas celdas.
 
 **NOTA: El código del video esta basado en Tensor Flow 1.0. Pero el Tensor Flow que se ha instalado es la version 2.x, la llamaremos TF2.0 o TF20 . Por lo tanto hay muchas cosas que no son compatibles. En el código habrá partes 
-las principales que se indique que no se usa en TF20, pero el resto de partes se pondrá en código TF20 para no poner demasiada basura en el código
+las principales que se indique que no se usa en TF20, pero el resto de partes se pondrá en código TF20 para no poner demasiada basura en el código**
 
 # Código
+
+[Código fuente descargable](/docs/python/machine_learning/tensor_flow/tf_variables_sesiones.ipynb) 
 
 ```tpl
 # Libería de tensor flow

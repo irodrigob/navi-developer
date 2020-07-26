@@ -13,6 +13,8 @@ En este ejemplo se usa la librería *Scikit learn(Sklearn)* que según el video 
 
 # Código
 
+[Código fuente descargable](/docs/python/machine_learning/redes_neuronales/redes_neuronales_sklearn.ipynb) 
+
 Librerias del proceso
 ```tpl
 import sklearn 

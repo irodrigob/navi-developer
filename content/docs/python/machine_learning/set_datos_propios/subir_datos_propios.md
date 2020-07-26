@@ -17,6 +17,8 @@ El fichero tiene ocho columnas de características y una columna para la etiquet
 
 # Código
 
+[Código fuente descargable](/docs/python/machine_learning/datos_propios/set_datos_propio.ipynb) 
+
 ```tpl
 # Paquete para leer el fichero CSV
 import pandas as pd
