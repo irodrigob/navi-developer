@@ -16,7 +16,7 @@ tupla=(1,2,3,4,5,6,7)
 lista=[8,9,10,11,12]
 ```
 
-La diferencia en que la lista no puede ser modificada durante el programa pero una lista si que se puede. Salvo en las cadenas, que no pueden ser modificadas.
+La diferencia en que la tupla no puede ser modificada durante el programa pero una lista si que se puede. Salvo en las cadenas, que no pueden ser modificadas.
 
 Un truco para obtener el último valor sin usar el *LEN* es usar el *-1*. Ejemplo:
 ```tpl
@@ -173,7 +173,39 @@ Resultado:
 Contenido  6
 ```
 
-
 ## Tuplas
 
 El acceso a los valores de las tuplas se hace igual que con las listas.  
+
+# Creación de rangos
+
+Es posible crear rangos con números preasignados que es útil para hacer contadores o cualquier otra cosa.
+
+Ejemplo:
+```tpl
+x = range(6)
+
+for n in x:
+   print("Valor: ", n)
+```
+Resultado:
+```
+Valor:  0
+Valor:  1
+Valor:  2
+Valor:  3
+Valor:  4
+Valor:  5
+```
+Es posible indicarle el incremento en cada valor:
+```tpl
+x = range(0,6, 2)
+for n in x:
+   print("Valor: ", n)
+```
+Resultado:
+```
+Valor:  0
+Valor:  2
+Valor:  4
+```
