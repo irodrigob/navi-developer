@@ -165,3 +165,15 @@ Según la Wikipedia: *TensorFlow es una biblioteca de código abierto para apren
 ## Instalación
 
 Tensor flow no viene instalado por defecto pero justo en el página de [Anaconda](/docs/python/anaconda.md) en la sección de instalación de librerías, se explica como instalar Tensor Flow a modo de ejemplo.
+
+# Keras
+
+## ¿Qué és?
+
+Según la Wikipedia: *Keras es una biblioteca de Redes Neuronales de Código Abierto escrita en Python. Es capaz de ejecutarse sobre TensorFlow, Microsoft Cognitive Toolkit o Theano. Está especialmente diseñada para posibilitar la experimentación en más o menos poco tiempo con redes de Aprendizaje Profundo. Sus fuertes se centran en ser amigable para el usuario, modular y extensible.*
+
+## Instalación
+
+La librería no esta instalada por defecto, lo más fácil es instalarla a través del anaconda navigator:
+
+![Libreria Keras](/images/python/machine_learning/anaconda/libreria_keras.png)
