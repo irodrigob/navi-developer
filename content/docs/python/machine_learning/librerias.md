@@ -177,3 +177,15 @@ Según la Wikipedia: *Keras es una biblioteca de Redes Neuronales de Código Abi
 La librería no esta instalada por defecto, lo más fácil es instalarla a través del anaconda navigator:
 
 ![Libreria Keras](/images/python/machine_learning/anaconda/libreria_keras.png)
+
+# Pylint
+
+## ¿Qué és?
+ 
+Es una libreria que analiza la calidad del código cuando se desarrolla programas en Python. Más información [aquí](https://www.pylint.org/)
+
+## Instalación
+
+La librería no esta instalada por defecto, lo más fácil es instalarla a través del anaconda navigator:
+
+![Libreria Pylibnt](/images/python/machine_learning/anaconda/libreria_pylint.png.png)
