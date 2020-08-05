@@ -10,6 +10,22 @@ Librerias y pawuetes para poder usar el Machine Learning.
 
 Los pasos para instalar las librerías esta explicado en la página de [Anaconda](/docs/python/anaconda.md).
 
+# Tensor Flow
+
+## ¿Qué és?
+ 
+Según la Wikipedia: *TensorFlow es una biblioteca de código abierto para aprendizaje automático a través de un rango de tareas, y desarrollado por Google para satisfacer sus necesidades de sistemas capaces de construir y entrenar redes neuronales para detectar y descifrar patrones y correlaciones, análogos al aprendizaje y razonamiento usados por los humanos.*
+
+## Instalación
+
+La librería no esta instalada por defecto, lo más fácil es instalarla a través del anaconda navigator:
+
+![Tensor Flow](/images/python/machine_learning/anaconda/libreria_tensorflow.png)
+
+Como es la librería que permite realizar más cosas con Machine Learning se ha instalado tanto versión CPU, como GPU. GPU porque las tarjetas gráficas tienen más procesadores lo que permite hacen calculos más rapidos que si solo se usará la CPU.
+
+En la imagen hay librerías secundarías que se instalan al instalarse la principal.
+
 # Numpy
 
 ## ¿Qué és?
@@ -188,4 +204,16 @@ Es una libreria que analiza la calidad del código cuando se desarrolla programa
 
 La librería no esta instalada por defecto, lo más fácil es instalarla a través del anaconda navigator:
 
-![Libreria Pylibnt](/images/python/machine_learning/anaconda/libreria_pylint.png.png)
+![Libreria Pylint](/images/python/machine_learning/anaconda/libreria_pylint.png)
+
+# Pillow
+
+## ¿Qué és?
+ 
+Es una libreria que añade capacidad de procesamiento de imagenes
+
+## Instalación
+
+La librería no esta instalada por defecto, lo más fácil es instalarla a través del anaconda navigator:
+
+![Libreria Pillow](/images/python/machine_learning/anaconda/libreria_pillow.png)

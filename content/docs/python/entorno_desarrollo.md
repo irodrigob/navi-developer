@@ -66,7 +66,7 @@ Yo me he instalado la versión *64-Bit Grapical Installer*.
 
 Una vez instalado lo abriremos el menú de inicio de Windows y escribiremos *Anaconda*:
 
-![Ejcutar Anaconda](/images/python/entorno_desarrollo/anaconda_menu_aplicaciones.png)
+![Ejecutar Anaconda](/images/python/entorno_desarrollo/anaconda_menu_aplicaciones.png)
 
 Una vez arrancado sale la siguiente pantalla:
 
