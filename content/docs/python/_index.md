@@ -2,7 +2,7 @@
 title: Python
 description: Python
 weight: 20
-bookCollapseSection: false
+bookCollapseSection: true
 ---
 
 # Introducción

@@ -57,6 +57,12 @@ Una vez instalado todo en la parte superior derecha del VS Code se verá el serv
 
 Cuando volvamos abrir de nuevo el VSCode y abrir un editor del Jupyter Notebook el servidor arrancará automáticamente.
 
+** AVISO **
+
+Si se esta usando Anaconda para la gestión de los paquetes es necesario tener instalado la libería *ipykernel* en el entorno seleccionado. En caso contrario dará un error que falta instalarlo.
+
+En el ejemplo de arriba no se explica porque en el entorno de Anaconda de testeo que se creo se instalo la funcionalidad *Jupyter Notebooks* que lo instala de manera indirecta.
+
 
 # Anaconda
 

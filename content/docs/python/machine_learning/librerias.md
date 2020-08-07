@@ -217,3 +217,15 @@ Es una libreria que añade capacidad de procesamiento de imagenes
 La librería no esta instalada por defecto, lo más fácil es instalarla a través del anaconda navigator:
 
 ![Libreria Pillow](/images/python/machine_learning/anaconda/libreria_pillow.png)
+
+# ipykernel
+
+## ¿Qué és?
+ 
+Es una libreria que usa VS Code para poder conectarse a los entornos de anaconda.
+
+## Instalación
+
+La librería no esta instalada por defecto, lo más fácil es instalarla a través del anaconda navigator:
+
+![Libreria Pillow](/images/python/machine_learning/anaconda/libreria_ipykernel.png)
