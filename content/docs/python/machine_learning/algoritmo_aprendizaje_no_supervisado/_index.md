@@ -1,6 +1,7 @@
 ---
 title: Algoritmos de aprendizaje no supervisado
 description: Algoritmos de aprendizaje no supervisado
+bookCollapseSection: true
 ---
 
 # Introducción

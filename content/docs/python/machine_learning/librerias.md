@@ -229,3 +229,48 @@ Es una libreria que usa VS Code para poder conectarse a los entornos de anaconda
 La librería no esta instalada por defecto, lo más fácil es instalarla a través del anaconda navigator:
 
 ![Libreria Pillow](/images/python/machine_learning/anaconda/libreria_ipykernel.png)
+
+# OpenCV
+
+## ¿Qué és?
+ 
+Según la Wikipedia: *es una biblioteca libre de visión artificial originalmente desarrollada por Intel. OpenCV significa Open Computer Vision (Visión Artificial Abierta). Desde que apareció su primera versión alfa en el mes de enero de 1999, se ha utilizado en una gran cantidad de aplicaciones, y hasta 2020 se la sigue mencionando como la biblioteca más popular de visión artificial.1​ Detección de movimiento, reconocimiento de objetos, reconstrucción 3D a partir de imágenes, son sólo algunos ejemplos de aplicaciones de OpenCV.*
+
+## Instalación
+
+La librería no esta instalada por defecto, lo más fácil es instalarla a través del anaconda navigator:
+
+![Libreria Pillow](/images/python/machine_learning/anaconda/libreria_opencv.png)
+
+# Tesseract 
+
+## ¿Qué és?
+
+No es ni librería ni paquete, es un porgrama que se instala en practicamente cualquier sistema operativo y que permite reconocer texto en imagenes. Es un programa que esta bajo licencia Apache v2 con lo que permite ser usado por cualquiera libremente. Actualmente es uno de los mejores OCR open-source.
+
+## Instalación
+
+Como es un programa cuyas versiones van variando lo mejor es consultar dos sitios:
+
+1. Su [página web en github](https://tesseract-ocr.github.io/tessdoc/)
+2. Su [repositorio en github](https://github.com/UB-Mannheim/tesseract/wiki)
+
+*A día 11/08/2020 se ha instalado la versión estable 4.1. Aunque esta disponible la versión 5.0 en versión Alpha*
+
+# Pytesseract
+
+## ¿Qué és?
+
+Es una librería que encapsula las llamadas a *Tesseract* simplificando su uso.
+
+## Instalación
+
+La instalación se tiene que realizar a través del instalador de Python, *PIP* usando el *powershell* de Anaconda. Los comandos son:
+
+```tpl
+conda activate <entorno>
+pip install pytesseract
+pip3 install pytesseract
+```
+
+

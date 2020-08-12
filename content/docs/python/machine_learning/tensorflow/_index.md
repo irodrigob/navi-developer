@@ -1,6 +1,7 @@
 ---
 title: Tensor Flow
 description: Tensor Flow
+bookCollapseSection: true
 ---
 
 # Introducción

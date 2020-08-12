@@ -1,6 +1,7 @@
 ---
 title: Vectorización
 description: Vectorización
+bookCollapseSection: true
 ---
 
 # Introducción

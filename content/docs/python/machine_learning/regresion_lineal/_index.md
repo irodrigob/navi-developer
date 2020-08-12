@@ -1,6 +1,7 @@
 ---
 title: Regresion lineal
 description: Regresion lineal
+bookCollapseSection: true
 ---
 
 # Introducción

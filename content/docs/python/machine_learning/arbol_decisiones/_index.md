@@ -1,6 +1,7 @@
 ---
 title: Arbol de decisiones
 description: Arbol de decisiones
+bookCollapseSection: true
 ---
 
 # Introducción

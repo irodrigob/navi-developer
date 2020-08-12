@@ -164,3 +164,15 @@ hola ivan, hoy es dia 5 y son las 16.32
 ```
 El numero de formatos en la cadena debe coincidir con el número de valores en una tupla para que no de error.
 
+
+## String sin carácteres de escape
+
+Si queremos inicializar una variable con un ruta de nuestro disco duro como esto:
+```tpl
+path = "c:\archivos de programa\test\test.exe" 
+```
+No se almacene bien porque python por defecto usa el carácter *\* como carácter de escape. Si queremos decirle que lo trate como un *raw string*, es decir, literal sin tranformaciones hay que poner una *r* delante del literal, tal que así:
+```tpl
+path = r"c:\archivos de programa\test\test.exe" 
+```
+

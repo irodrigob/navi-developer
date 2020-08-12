@@ -1,6 +1,7 @@
 ---
 title: Procesamiento de datos
 description: Procesamiento de datos
+bookCollapseSection: true
 ---
 
 # Introducción

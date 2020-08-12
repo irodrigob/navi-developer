@@ -1,6 +1,7 @@
 ---
 title: Redes neuronales
 description: Redes neuronales
+bookCollapseSection: true
 ---
 
 # Introducción

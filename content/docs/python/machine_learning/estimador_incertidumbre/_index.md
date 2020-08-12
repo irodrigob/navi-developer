@@ -1,6 +1,7 @@
 ---
 title: Estimador incertidumbre
 description: Ejemplo sobre los estimadores de incertidumbre
+bookCollapseSection: true
 ---
 
 # Introducción

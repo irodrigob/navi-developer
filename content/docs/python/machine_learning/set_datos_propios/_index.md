@@ -1,6 +1,7 @@
 ---
 title: Set de datos propios
 description: Set de datos propios
+bookCollapseSection: true
 ---
 
 # Introducción
