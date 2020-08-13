@@ -82,3 +82,34 @@ Número:  4
 Número:  3
 Número:  2
 ```
+
+### Usando enumerate
+
+*enumerate* permite recorre una lista recorriendo todos sus valores y devolviendo el índice y su valor. Ejemplo:
+
+```tpl
+numeros = [5,4,3,2]
+for indice, valor in enumerate(numeros):
+    print(f"indice: {indice} valor: {valor}")
+```
+Resultado:
+```
+indice: 0 valor: 5
+indice: 1 valor: 4
+indice: 2 valor: 3
+indice: 3 valor: 2
+```
+Lo que permite el *enumarete* es olvidarte de saber cuantos registros tiene la tabla y lo gestiona él.
+
+Yo esta sentencia la he usado junto a los *dictionary* para saber en que indice esta un valor:
+
+```tpl
+block_num_index = {}
+for index, value in enumerate(data['block_num']):
+    block_num_index.setdefault(value,[]).append(index)
+```
+En debugging el *dictionary* quedaría así:
+
+![Resultado](/images/python/sentencias/enumerate_junto_dictionary.png)
+
+La clave son números, ya que son códigos de grupo, y el valor de cada clave es el índice donde aparecerá dicho grupo.
