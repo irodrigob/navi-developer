@@ -52,7 +52,7 @@ TypeError: 'str' object does not support item assignment
 ## Bucles 
 A las cadenas también se puede acceder haciendo iteracciones. Ejemplo:
 
- Ejemplo:
+Ejemplo:
 ```tpl
 texto="hola"
 n=0

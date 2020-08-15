@@ -273,4 +273,17 @@ pip install pytesseract
 pip3 install pytesseract
 ```
 
+# Rope
 
+## ¿Qué és?
+
+Es una librería que permite realizar refactoring en el código
+
+## Instalación
+
+En caso de intentar hacer un refactoring con VSCode sin tenerlo instalado el propio editor te pregunta si lo quieres instalar, haciendo el proceso de manera automática. Si se quiere hacer manualmente hay que hacerlo con el *PiP*
+
+```tpl
+conda activate <entorno>
+pip install rope
+```
