@@ -5,7 +5,7 @@ description: Anaconda
 
 # Introducción
 
-Tal como se ha explicado en la página de [entorno de desarrollo](/docs/python/entorno_desarrollo.md), Anaconda permite la instalación de paquetes para usar el machine learning en Python.
+Tal como se ha explicado en la página de [entorno de desarrollo](/docs/python/entorno_desarrollo.md), Anaconda permite la instalación de paquetes para usar el machine learning en Python o cualquier otro paquete para proyectos en Pytjon..
 
 # Entornos
 
