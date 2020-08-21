@@ -20,7 +20,7 @@ Muchos pasos hay que realizarlos desde el terminal de Windows. Que se puede usar
 
 *Django* se puede instalar a través de [Anaconda](/docs/python/anaconda.md):
 
-![Libreria Django Rest Framework](/images/python/framework/djando_anaconda.png)
+![Libreria Django Rest Framework](/images/python/framework/django/djando_anaconda.png)
 
 *Django Rest Framework*  hay que instalarlo a través del *PiP*:
 ```tpl
@@ -131,3 +131,6 @@ admin.site.register(Image)
 ```
 Donde *Image* es el nombre del modelo(es una clase) que esta definida en el archivo *models.py* del mismo directorio.
 
+# Artículos sobre Django
+
+{{<section>}}
