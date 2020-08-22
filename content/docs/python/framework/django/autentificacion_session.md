@@ -92,7 +92,7 @@ Lo bueno de los serializers en *Django Rest Framework* es que pueden detener su 
 
 Las vistas es el endpoint donde accede el servicio. De nuevo, he creado el fichero *views.py* en la misma carpeta que el serializer.
 
-Las vistas usadas son las genéricas las que son *APIView*, el método aparte que sale en el ejemplo que he encontrado, es que hay que declararla el método HTTP que quieres usar. Si llamas al servicio con un método *POST* pero solo tienes definido el *GET* te va a dar un error que el método usado no es válido. 
+Las vistas usadas son las genéricas, las *APIView*. Supongo que usan ese tipo de vistas porque tienen que declarar los distintos métodos que quieres usar. Si llamas al servicio con un método *POST* pero solo tienes definido el *GET* te va a dar un error que el método usado no es válido. 
 
 Si se usará las vistas *ViewSet* no se puede hacer porque automimplementan ellas mismas todos los métodos.
 

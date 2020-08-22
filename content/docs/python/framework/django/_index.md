@@ -7,14 +7,14 @@ description: Djando y librerías asociadas
 
 [Django](https://www.djangoproject.com/) es un framework que permite realizar aplicaciones web de una manera sencilla y rápida. 
 
-A esto hay que sumarle [Django Rest Framework](https://www.django-rest-framework.org/) que permite crear servicios REST a través de *Django*
+A esto hay que sumarle [Django Rest Framework](https://www.django-rest-framework.org/), de aquí en adelante DRF, que permite crear servicios REST a través de *Django*
 
-En mi caso quiero usar *Django* + *Django Rest Framework* porque me permite publicar servicios web y guardar determinada información en una base de datos (inicialmente estoy usando la que viene por defecto que es *SQLite3*) de una manera bastante sencilla.
+En mi caso quiero usar *Django* + *Django Rest Framework* porque me permite publicar servicios web y guardar determinada información en una base de datos (inicialmente estoy usando la que viene por defecto que es *SQLite3*) de una manera bastante sencilla. Ya que usando las vistas de tipo *ViewSet* DRF se encarga de gestionar todo el CRUD de un modelo de datos sin añadir nada de código. 
+Además DRF usa la arquitectura MVC. Donde la M son los modelos que se crean en *Django*. La V son las *Views* de DRF. Y la C es el *serializer* de DRF. Esto hace posible [crear servicios sin modelo](/docs/python/framework/django/autentificacion_session.md) usando solo las *Views* y *Serializers* con DRF. Que no sé si esto con *Django* se puede hacer.
 
 A nivel de usarlo en nuestras aplicaciones *Django* se estructura en proyectos y aplicaciones. Y estos se creán dentro del directorio de nuestro proyecto.
 
 Muchos pasos hay que realizarlos desde el terminal de Windows. Que se puede usar tanto el *Anaconda PowerShell* como el VSCode si lo hemos abiertos a través del *Anaconda Navigator* con el entorno que queremos ya preseleccionado. El resultado en ambos casos es el mismo
-
 
 # Instalar las librerías
 

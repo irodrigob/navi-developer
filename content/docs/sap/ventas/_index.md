@@ -1,7 +1,7 @@
 ---
 title: Ventas
 description: Ventas (SD)
-bookCollapseSection: false
+bookCollapseSection: true
 ---
 
 # Objetivo

@@ -3,7 +3,6 @@ title: Publicar Web Github
 Description: Como publicar una web en Github
 weight: 20
 bookCollapseSection: true
-bookToc: true
 ---
 
 # Motivo
