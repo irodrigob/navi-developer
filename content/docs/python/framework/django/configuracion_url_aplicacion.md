@@ -22,7 +22,7 @@ from rest_framework import routers
 from . import views
 
 router = routers.DefaultRouter()
-router.register(r'invoice/Image', views.invoiceImageViewSet)
+router.register(r'invoice/image', views.invoiceImageViewSet)
 ```
 
 # URls a nivel de proyecto
@@ -55,7 +55,7 @@ el path de *admin* ya viene por defecto y le he añadido:
 
 La URL para llamar a un servicio de la aplicación como el configurado sería:
 ```
-http://localhost:8000/api/invoice/Image/
+http://localhost:8000/api/invoice/image/
 ```
 
 Para llamar a un servicio del proyecto sería:
