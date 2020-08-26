@@ -11,6 +11,17 @@ La forma de solucionar son dos dependiendo de donde tengamos la carpeta con nues
 
 En ambos casos la solución se realiza en el archivo *setting.py* que esta dentro de la carpeta de configuración del proyecto Django. El motivo de hacerlo en dicho archivo porque es el que se lee cuando arranca el proceso de Django.
 
+**AVISO IMPORTANTE:**
+
+La versión en que la librería esta fuera del proyecto funciona, las peticiones van sin problemas. He detectado que al sincronizar los modelos de las aplicaciones:
+
+```
+manage.py makemigrations <app>
+```
+
+Da un error que no encuentra la librería y no hay manera de hacerlo funcionar. Dejo como se hace por si en futuro encuentro la manera de corregirlo. Porque a nivel organizativo me gusta más fuera del proyecto.
+
+
 # Librería fuera de la carpeta del proyecto
 
 Tenemos la siguiente estructura:
@@ -39,6 +50,8 @@ from lib.img import image
 
 # Librería dentro de la carpeta de proyecto
 
+** Esta versión es la que uso actualmente porque me funciona con las sincronizaciones de los modelos **
+
 Tenemos la siguiente estructura:
 
 Proyecto VS Code
@@ -49,14 +62,12 @@ Proyecto VS Code
 |    |    |    |--- image
 
 
-Hay que añadir las siguientes líneas:
+Hay que añadir las siguientes dos líneas:
 ```
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EXTERNAL_LIBS_PATH = os.path.join(BASE_DIR, "lib")
 sys.path = ["", EXTERNAL_LIBS_PATH] + sys.path
 ```
 
 Aquí tenemos:
-1. Una variable con el directorio del proyecto django
-2. Una variable que concatena el valor de la variable anterior + el directorio donde están las librerías
-3. Se añade la variable a la variante de entorno
+1. Una variable que concatena el valor de la variable anterior + el directorio donde están las librerías
+2. Se añade la variable a la variante de entorno
