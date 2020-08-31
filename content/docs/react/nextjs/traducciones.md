@@ -74,7 +74,7 @@ const OCRApp = ({ Component, pageProps }) => {
   );
 };
 
-OCRApp.getServerSideProps = async (appContext) => {
+OCRApp.getInitialProps = async (appContext) => {
   const appProps = await App.getInitialProps(appContext);
   return { ...appProps };
 };
@@ -82,7 +82,9 @@ OCRApp.getServerSideProps = async (appContext) => {
 export default appWithTranslation(OCRApp);
 ```
 
-Este archivo es un poco distinto a lo que explican en el ejemplo del paquete. Porque a declarar la aplicación *OCRApp* faltaba el *return*. Luego se cambia el método *getInitialProps*, que indica que es *deprecated* pero sigue funcionado, por su sustituto. En este caso uso el *getServerSideProps* porque si cambio un fichero de traducción me lo recoge automáticamente cada vez que lo cambio. Si usará el *getStaticProps* que es el que recomienda *NextJS* habría que reiniciar el servidor cada vez. En entornos de producción puede ser conviente *getStaticProps* para que no lo este leyendo una y otra vez..
+Este archivo es un poco distinto a lo que explican en el ejemplo del paquete, porque a declarar la aplicación *OCRApp* faltaba el *return*. 
+
+Aunque NextJS recomienda no usar el *getInitialProps*, hay que usarlo por necesidad ya que el paquete no funciona bien con los *getServerSideProps* o *getStaticProps*, no falla, pero da un warning en consola constantemente sobre que falta declarar el *namespacesRequired*. Cosa que no ocurre si se usa el *getInitialProps*.
 
 ## Funcionamiento
 
@@ -111,10 +113,11 @@ Ejemplo del fichero es el siguiente:
 El nombre del las etiquetas no puede tener ni "." ni "_", ni supongo que otros carácteres, ya que sino no funciona. Probado personalmente porque en *Open UI5* suelo usar el "." para separar cada parte de la etiqueta.
 
 **NOTA IMPORTANTE:** Se pueden crear ficheros con otros nombres, pero el *common* es el que ira a buscar por defecto. Será en las páginas/componentes donde se indique el fichero que se quiere leer.
+**NOTA IMPORTANTE 2:** Los cambios que se hagan en los ficheros de traducción implica tener que reiniciar el servidor para tomar los cambios.
 
-### Usando en páginas
+### Usando en páginas y componentes
 
-Un ejemplo de como usarlo en una página es el siguiente:
+Un ejemplo de como usarlo en una página o componentes es el siguiente:
 
 ```tpl
 import PropTypes from "prop-types";
@@ -146,16 +149,22 @@ Cosas a tener en cuenta:
 
 * El *{t}* que son los parámetros de la vista siempre será *t* ya que es el que se pasa al hacer *withTranslation("common")(login)*
 * El texto se recupera usando *{t("<nombre de la etiqueta>")}* 
-
-Cosas que tengo pendientes de probar con más calma:
-
-* El *.propTypes* es una validación para que el parámetro *t* sea obligatorio. Pero tengo claro que sea necesarioa.
 * El *namespacesRequired* se pone porque lo indica la [docu oficial](https://github.com/isaachinman/next-i18next#4-declaring-namespace-dependencies) para temas de rendimiento. Ya que sino se indica se lee todos los ficheros posibles, penalizando el rendimiento. Aun poniendolo me da el warning en la consola del servidor *NextJS*.
+
+Cosas que que no tengo claras:
+
+* El *.propTypes* es una validación para que el parámetro *t* sea obligatorio. Pero tengo claro que sea necesarioa. Ya que poniendolo, como si no, funciona todo bien. Y parámetro o props *t* se tienen que poner si o si.
 
 
 # Detectar el idioma
 
-* [i18next-browser-languageDetector](https://github.com/i18next/i18next-browser-languageDetector) que detecta el idioma del navegador
+Hay que instalar el paquete: [i18next-browser-languageDetector](https://github.com/i18next/i18next-browser-languageDetector) mediante el siguiente comando:
+```tpl
+npm install i18next-browser-languagedetector
+```
+
+**NOTA:NO SOY CAPAZ DE HACERLO FUNCIONAR DIRECTAMENTE CON NEXT-I18NEXT** Encontrará soluciones alternativas.
+
 
 
 
