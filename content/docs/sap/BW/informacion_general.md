@@ -7,9 +7,9 @@ description: Información general
 
 Esta página contendrá información de general sobre BW que no se muy bien donde clasificar.
 
-# Como probar un cubo en R/3
+# Como probar una query en R/3
 
-Normalmente los cubos se suelen utilizar desde herramientas de SAP que están fuera del SAP GUI. Pero puede ser interesante, poder probar el cubo para ver que datos tienes y que se puede hacer con él. El siguiente ejemplo de como hacerlo se basa en cubo generado con un CDS desde un sistema S/4 HANA. 
+Normalmente las querys se suelen utilizar desde herramientas de SAP que están fuera del SAP GUI. Pero puede ser interesante, poder probar dicha query para ver que datos tienes y que se puede hacer con él. El siguiente ejemplo de como hacerlo se basa en una query que usa un cubo generado con un CDS desde un sistema S/4 HANA, pero puede servir para los cubos tradicionales de BW.
 
 Lo primer es ir a la transacción *RSRT*. En el campo de query hay que pulsar sobre la ayuda para búsqueda y buscar el cubo:
 
