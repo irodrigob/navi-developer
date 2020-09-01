@@ -60,7 +60,17 @@ En las preguntas tenemos la posibilidad de crear la carpeta donde estará el pro
 
 * El nombre del *namespace* se concatena al nombre de la carpeta. Creo que en su momento yo puse un *namespace* pero le indique que no creará la carpeta.
 
-3. Como en mi caso voy a llamar a servicios que están en un sistema SAP hay que instalar un proxy para evitar el cross domain. Para eso hay que hacer lo siguiente:
+3. Ahora abrimos el VS Code y se abre la carpeta del proyecto. Ahora en la parte inferior hay varias pestañas, ir a la de *Terminal* y pondremos:
+
+```tpl
+npm start
+```
+
+## Tareas opcionales
+
+### Instalar servidor proxy 
+
+Como en mi caso voy a llamar a servicios que están en un sistema SAP hay que instalar un proxy para evitar el cross domain. Para eso hay que hacer lo siguiente:
 
 * Desde la consola de Windows ejecutar el siguiente comando: 
 ```tpl
@@ -97,11 +107,51 @@ Se pone el asterisco en la versión para que sea válido para cualquier versión
   }
 ```
 
-4. Ahora abrimos el VS Code y se abre la carpeta del proyecto. Ahora en la parte inferior hay varias pestañas, ir a la de *Terminal* y pondremos:
 
-```tpl
-npm start
-```
 
 Esto arrancará el servidor web con la aplicación si todo esta bien arranca la aplicación template que se ha creado con el *yo easy-ui5*.
+
+### Subir el proyecto a una BSP
+
+Desde el VSCode es posible subir el proyecto a una BSP, en caso que las usemos para publicar nuestros aplicaciones. Para ello hay que instalar el paquete [ui5-task-nwabap-deployer](https://github.com/pfefferf/ui5-nwabap-deployer/tree/master/packages/ui5-task-nwabap-deployer) con el comando:
+
+```tpl
+npm install ui5-task-nwabap-deployer
+```
+
+Ahora en el fichero *ui5.yaml*, que esta en el raíz del proyecto, hay que añadir las siguientes líneaS:
+
+```tpl
+builder:
+  customTasks:
+  - name: ui5-task-nwabap-deployer
+    afterTask: generateVersionInfo
+    configuration: 
+      resources:
+        pattern: "**/*.*"
+      connection:
+        server: http://myserver:8000  
+      authentication:
+        user: myUser
+        password: myPassword
+      ui5:
+        language: EN
+        package: ZZ_UI5_REPO
+        bspContainer: ZZ_UI5_TRACKED
+        bspContainerText: UI5 Upload
+        transportNo: DEVK900000
+        calculateApplicationIndex: true  
+```
+
+Los datos a poner son los suficientes intuitivos y no es necesario explicarlos.
+
+Ahora para deployarlo en la BSP tan solo hay que ejecutar el siguiente comando:
+
+```tpl
+npm run build:ui
+```
+
+Con esto sube la aplicación a la BSP indicada. Si no esta creada, la crea.
+
+
 
