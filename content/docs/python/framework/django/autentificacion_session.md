@@ -158,8 +158,8 @@ A nivel de proyecto hay que añadir el acceso a las dos vistas creadas. Para ell
 ```tpl
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(r'login', views.LoginView.as_view(), name='login'),
-    path(r'logout', views.LogoutView.as_view(), name='logout')
+    path(r'api/login', views.LoginView.as_view(), name='login'),
+    path(r'api/logout', views.LogoutView.as_view(), name='logout')
 ]
 ```
 
@@ -167,7 +167,7 @@ El path de *admin* ya viene de serie y se añade las dos vistas de login y logou
 
 # Funcionamiento
 
-Las pruebas se han hecho con el programa *POSTMAN*. Para hacer el login és con la siguiente url: [http://localhost:8000/login](http://localhost:8000/login)
+Las pruebas se han hecho con el programa *POSTMAN*. Para hacer el login és con la siguiente url: [http://localhost:8000/api/login](http://localhost:8000/api/login)
 
 Al llamarlo a nivel de cabecera veremos las dos cookies que genera:
 
