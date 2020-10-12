@@ -9,6 +9,17 @@ Son como las listas o tuplas pero al acceso a sus valores no se accede por un í
 
 Por lo que he visto hay diccionarios simples que es una relación clave<->valor y otros más complejos. De momento explicaré los simples para tener una base
 
+## Como saber si un variables es tipo dict
+
+Hay dos maneras:
+```tpl
+if type(<variable>) is dict 
+```
+
+```tpl
+isinstance(<variable>, dict)
+```
+
 ## Simples
 
 Crear un diccionario es muy simple tan sólo hay que usar la siguiente sentencia:
