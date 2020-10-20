@@ -18,7 +18,7 @@ weight: 20
 
 ![Abrir Git Bash](/images/github/generar_clave_rsa/abrir_git_bash.png)
 
-2. En el terminal que aparecerá escribir: ssh-key -t rsa -b 4096 -C "mail que nos hemos registrado en github" y al pulsar enter nos aparecerá esto:
+2. En el terminal que aparecerá escribir: ssh-keygen -t rsa -b 4096 -C "mail que nos hemos registrado en github" y al pulsar enter nos aparecerá esto:
 
 ![Generar RSA](/images/github/generar_clave_rsa/generar_rsa.png)
 
@@ -30,7 +30,7 @@ Se nos pedirá introducir una frase:
 
 La frase se dejará en blanco para no tener que introducirla en todos los sitios que se haga push.
 
-3.	Ahora hay que añadir la clave generada al ssh-agent. Pero para eso primero hay que valir que este en marcha. Para ello hay que introducir: 	eval $(ssh-agent –s):
+3.	Ahora hay que añadir la clave generada al ssh-agent. Pero para eso primero hay que validar que este en marcha. Para ello hay que introducir: 	eval $(ssh-agent –s):
 
 ![SSH Agent](/images/github/generar_clave_rsa/ssh_agent.png)
 
