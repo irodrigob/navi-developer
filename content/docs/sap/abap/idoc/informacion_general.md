@@ -16,8 +16,10 @@ El menú *WEDI* contiene todas las transacciones para crear, gestionar y monitor
 
 Transacción | Descripción
 --------|--------
+WEDI | Menu ambito de IDOCS
 WE19 | Clonar IDOC para poderlo procesar
 BD87 | Analizar IDOC's
+WE11 | Borrar IDOCs
 
 # Programas
 

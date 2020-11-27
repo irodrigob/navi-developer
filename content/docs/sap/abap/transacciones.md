@@ -47,12 +47,6 @@ SCOT | Configuración de los canales de comunicación: mail, fax, etc.
 SOST | Transacción que gestiona la salida de los canales de comunicación configurado: mail, fax, etc.
 SOSG | Como la SOST pero solo de tu usuario
 
-## IDOC
-
-Transacción | Descripción
---------|--------
-WEDI | Menu ambito de IDOCS
-
 ## Recursos humanos
 
 Transacción | Descripción
@@ -65,6 +59,7 @@ PC_PAYRESULT | Ve los resultados de nomina de un empleado
 Transacción | Descripción
 --------|--------
 ST12 | Hibrido entre la SAT y ST05 para temas de rendimiento ya sea web, programa, etc..
+SRT_UTIL | Hacer trace de servicios web. Permite ver todo el payload.
 
 ## Para SAP BW
 
