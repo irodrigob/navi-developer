@@ -34,3 +34,6 @@ Es la extensión que uso para que formatear el código. Creo que para este exten
   "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
 ```
+# Bracket pair colorizer
+
+Es una extensión que pone colores distintos en las aperturas y cierres de llaves, con lo que facilita la lectura del código.
