@@ -111,6 +111,14 @@ Resultado:
 Valores antes: [8, 9, 10, 11, 12]
 Valores después: [8, 9, 10, 11, 12, 13]
 ```
+### Buscar valores
+
+La opción más simple de buscar valores es con la claúsula *in*, ejemplo:
+
+```tpl
+3 in [1, 2, 3] # => True
+```
+
 
 ### Sublistas
 
