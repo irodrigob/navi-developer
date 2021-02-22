@@ -137,6 +137,10 @@ Para saber como funciona mejor es irse a la [docu oficial de Python](https://doc
 
 ## Formatos
 
+Para formatear existen nos formas al estilo antiguo o el nuevo. Soy partidario del nuevo porque con el antiguo he tenido algún que otro problema, y lo he tenido que solucionar con nueva manera.
+
+### Método antiguo
+
 Como cadenas se les puede aplicar formatos. El carácters para aplicar formatos es *%* y a continuación el tipo de valor que se va formtear:
 
 * d --> Decimal
@@ -164,6 +168,15 @@ hola ivan, hoy es dia 5 y son las 16.32
 ```
 El numero de formatos en la cadena debe coincidir con el número de valores en una tupla para que no de error.
 
+### Método nuevo
+
+El método nuevo se parece a construir un json
+
+```tpl
+texto = "{field}: {message}".format(
+            field="campo", message="mensaje")
+print(texto)
+```
 
 ## String sin carácteres de escape
 
