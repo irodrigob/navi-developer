@@ -24,3 +24,7 @@ Aparecerá una pantalla para introducir los datos de selección. Y una vez intro
 ![Salida del cubo](/images/sap/BW/info_general_salida_cubo.png)
 
 Los datos que aquí se muestran serán los mismos que salgan en cualquier heramienta que explote dicho cubo.
+
+# Variables del query designer
+
+En el query designer para poder hacer filtros variables, es decir que se pasan los datos a filtrar por parámetro, hay que crear variable y asignarsela al campo. Pues una vez se crea la variable no es posible editarla o borrar, la única manera de hacerlo es a través de la tabla *RSZGLOBV*. En esta tabla filtrando por el campo *VNAM* por la variable obtenemos los datos de la variable, se podrá borrar o modificar la configuración de las variables.
