@@ -85,6 +85,93 @@ Una vez creada la collection la base de datos se crea, si no lo estuviera previa
 
 ![Collection creada en el cloud](/images/mongodb/gui/robo_collection_creada_cloud.png)
 
-# Añadiendo registros a la collection
+# Operacion CRUD
 
-Si queremos ver todas las posibilidades de las operaciones CRUD lo mejor es ir a la documentación [oficial](https://docs.mongodb.com/v5.0/crud/), yo explicaré las opciones básicas.
+Si queremos ver todas las posibilidades de las operaciones CRUD lo mejor es ir a la [documentación oficial](https://docs.mongodb.com/v5.0/crud/), yo explicaré las opciones básicas.
+
+## Inserción de documentos
+
+En la siguiente [documentación oficial](https://docs.mongodb.com/v5.0/tutorial/insert-documents/) podemos ver más en detalle las posibilidades.
+
+Para insertar un registro simple hacemos lo siguiente:
+
+```tpl
+use ejemplo
+
+db.mitabla.insertOne({{mueble:"mesa", material:"madrea", medidas:{altura:50,anchura:30,unidad:"cm"})
+```
+El formato para introducir los registros es similar, o practicamente igual, al formato JSON.
+Una vez ejecutado la sentencia veremos el siguiente resultado:
+
+![Inserción registros](/images/mongodb/gui/robo_insercion_collection.png)
+
+Es importante mencionar que siempre se inserta un campo llamado *_ID*. Este campo es que tendrá la clave única del registro. En la imagen lo podemos ver en la rama *insertedID*.
+
+Si queremos insertar multiples registros a la vez podemos usar la opción *insertMany* poniendo un *[{<campos>}]*. Vamos un array de JSON. Ejemplo:
+
+```tpl
+use ejemplo
+
+db.mitabla.insertMany([{mueble:"mesa", 
+                        material:"madera", 
+                        medidas:{altura:50,anchura:30,unidad:"cm"},
+                        color:"blanco"},
+                        {mueble:"silla", 
+                        material:"madera", 
+                        medidas:{altura:40,anchura:20,unidad:"cm"},
+                        color:"gris"}])
+```
+
+El resultado en el log de la consola sería el siguiente:
+
+![Inserción registros](/images/mongodb/gui/robo_insercion_collection2.png)
+
+De nuevo en la rama *insertedID* se pueden ver los *_ID* que se han insertado. 
+
+Un detalle es que en esta inserción de varios documentos he añadido un campo nuevo, *COLOR* que no estaba en el primer registro que he añadido. Esto es posible en este tipo de base de datos, aunque personalmente no lo recomiendo porque entonces no hay manera de tener una uniformidad de campos en los registros.
+
+## Consulta de documentos
+
+En la [documentación oficial](https://docs.mongodb.com/v5.0/tutorial/query-documents/) encontraremos todas las opción disponibles.
+
+### Buscar todos los documentos
+
+La búsqueda de documentos es muy simple con la siguiente opción:
+
+```tpl
+use ejemplo
+
+db.mitabla.find({})
+```
+
+El resultado sería el siguiente:
+
+![Consulta todos los documentos](/images/mongodb/gui/robo_consulta_docs.png)
+
+
+### Filtrando por campos
+
+El filtro de documentos es muy simple:
+
+```tpl
+use ejemplo
+
+db.mitabla.find({mueble:"mesa"})
+```
+El resultado:
+
+![Filtro de documento](/images/mongodb/gui/robo_consulta_docs2.png)
+
+Existe la posibilidad de usar operadores,"=,>=,etc", para poder hacer comparaciones. En la [documentación oficial](https://docs.mongodb.com/v5.0/reference/operator/query/#std-label-query-selectors) podemos ver los que hay y sus posibilidades.
+
+Para poder filtrar por campos dentro de otros campos, como el que he usado en *medidas*, se hace de la siguiente manera:
+
+```tpl
+use ejemplo
+
+db.mitabla.find({"medidas.anchura":30})
+```
+
+Y el resultado:
+
+![Filtro de campos dentro de documentos](/images/mongodb/gui/robo_consulta_docs3.png)
