@@ -124,11 +124,17 @@ db.mitabla.insertMany([{mueble:"mesa",
 
 El resultado en el log de la consola sería el siguiente:
 
-![Inserción registros](/images/mongodb/gui/robo_insercion_collection2.png)
+![Inserción multiregistros](/images/mongodb/gui/robo_insercion_collection2.png)
 
 De nuevo en la rama *insertedID* se pueden ver los *_ID* que se han insertado. 
 
 Un detalle es que en esta inserción de varios documentos he añadido un campo nuevo, *COLOR* que no estaba en el primer registro que he añadido. Esto es posible en este tipo de base de datos, aunque personalmente no lo recomiendo porque entonces no hay manera de tener una uniformidad de campos en los registros.
+
+Los datos también se pueden consultar de la collection desde la propia base del cloud del mongo:
+
+![Consulta datos cloud](/images/mongodb/gui/robo_datos_collection_cloud.png)
+
+En la imagen se ve claramente los campos insertados y el campo *_id* que es la clave única del registro.
 
 ## Consulta de documentos
 
@@ -149,7 +155,7 @@ El resultado sería el siguiente:
 ![Consulta todos los documentos](/images/mongodb/gui/robo_consulta_docs.png)
 
 
-### Filtrando por campos
+### Filtro por campos
 
 El filtro de documentos es muy simple:
 
@@ -175,3 +181,74 @@ db.mitabla.find({"medidas.anchura":30})
 Y el resultado:
 
 ![Filtro de campos dentro de documentos](/images/mongodb/gui/robo_consulta_docs3.png)
+
+### Proyección de campo o seleccionar que campos se quiere recuperar
+
+En las consultas es posible indicar los campos que se requiere recuperar para ello justo después de poner los filtros se indicarán que campos se quieren visualizar.
+
+Ejemplo:
+
+```tpl
+use ejemplo
+
+db.mitabla.find({mueble:"mesa"},{material:1})
+```
+El resultado:
+
+![Campos en el filtro](/images/mongodb/gui/robo_consulta_docs4.png)
+
+En la imagen se observa que se devuelven los campos de: *material* e *_id*. Si no queremos que el campo *_id* se devuelva hay que hacer lo siguiente:
+
+```tpl
+use ejemplo
+
+db.mitabla.find({mueble:"mesa"},{material:1,_id:0})
+```
+Para que no devuelva el campo hay que poner un *<nombre_campo>:0*. 
+
+Ahora, si lo queremos ver el campo de *_id* habría que hacer:
+
+```tpl
+use ejemplo
+
+db.mitabla.find({mueble:"mesa"},{_id:1})
+```
+Esto hace que solo se muestre el campo *_id*. 
+
+Si hacer la inversa, es edcir, que se muestren todos los campos menos el *_id*:
+
+```tpl
+use ejemplo
+
+db.mitabla.find({mueble:"mesa"},{_id:0})
+```
+
+Más información el [documentación oficial](https://docs.mongodb.com/v5.0/tutorial/project-fields-from-query-results/)
+
+## Actualización de documentos
+
+En la [documentación oficial](https://docs.mongodb.com/v5.0/tutorial/update-documents/) podremos obtener todas las opción en la actualización.
+
+Ejemplo vamos actualizar a filtrar los documentos que son *mesa* para poner que el tipo de material es *madera*, hay u
+
+```tpl
+use ejemplo
+
+db.mitabla.updateMany({mueble:"mesa"},
+    {
+     $set: { "material": "madera"},    
+   })
+```
+
+Como tenemos varios registro que son *mesa* he usado la opción *updateMany*. Si solo queremos actualizar un solo registro se usará la opción *updateOne*.
+
+Si volvemos a lanzar la consulta:
+
+```tpl
+use ejemplo
+
+db.mitabla.find({mueble:"mesa"},{mueble:1,material:1})
+```
+Veremos los registros actualizados:
+
+![Campos en el filtro](/images/mongodb/gui/robo_update_collection.png)
