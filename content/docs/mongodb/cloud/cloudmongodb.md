@@ -37,7 +37,7 @@ Ahora hay que crear un usuario para poder conectarnos a la base de datos. La pri
 
 Este primer usuario tendrá permisos administrador y es el que usaremos para podernos conectarnos a nuestro proyecto.
 
-## Registringir por IP
+## Restringir por IP
 
 En el asistente de creación inicial un paso es limitar el acceso por IP, en el asistente no hay botón que permita indicarle que no registra por IP. Yo me salte ese paso y lo he hecho a mano.
 
