@@ -1,5 +1,5 @@
 ---
-title: MongoDB en Aplicación
+title: MongoDB en aplicaciones
 weight: 20
 ---
 

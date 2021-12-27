@@ -1,6 +1,6 @@
 ---
-title: Servidor GraphQL
-description: Servidor GraphQL
+title: Mongoose
+description: Conector Mongoose
 ---
 
 # Introducción
