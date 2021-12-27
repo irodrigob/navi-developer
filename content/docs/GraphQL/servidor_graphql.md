@@ -144,5 +144,5 @@ Para poder probar las consultas hay que configurar los resolvers, pero antes, ha
 
 # Conectado MongoDB
 
-La conexión con MongoDB se hace en otro artículo porque puede servir tanto para aplicaciones con o sin GraphQL.
+La conexión con MongoDB se hace en este [artículo](https://irodrigob.github.io/docs/mongodb/usando_app/mongoose/) aparte porque es una configuración que sirve tanto para usarse en aplicación con GraphQL o sin el.
 

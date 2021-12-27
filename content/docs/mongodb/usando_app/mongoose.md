@@ -36,8 +36,13 @@ export const connectDb = async () => {
     console.log("db success connect");
   } catch (err) {
     console.log("error connecting to database");
-    console.log(err);
-    process.exit(1);
+    console.log(err);    
   }
 };
 ```
+Para el ejemplo voy a conectarme a la versión cloud que tiene MongoDB, en este [artículo](https://irodrigob.github.io/docs/mongodb/cloud/) se da más detalle de como hacerlo, por ello la URI la tengo en una variable de entorno ya que contiene usuario y contraseña. Pero la URL que se usa esta explicada en este [artículo](https://irodrigob.github.io/docs/mongodb/cloud/gui_accesocloud/).
+
+# Creando el modelo
+
+
+
