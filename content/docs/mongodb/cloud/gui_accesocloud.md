@@ -223,11 +223,11 @@ use ejemplo
 db.mitabla.find({mueble:"mesa"},{_id:0})
 ```
 
-Más información el [documentación oficial](https://docs.mongodb.com/v5.0/tutorial/project-fields-from-query-results/)
+Más información el [documentación oficial](https://docs.mongodb.com/v5.0/tutorial/project-fields-from-query-results/).
 
 ## Actualización de documentos
 
-En la [documentación oficial](https://docs.mongodb.com/v5.0/tutorial/update-documents/) podremos obtener todas las opción en la actualización.
+En la [documentación oficial](https://docs.mongodb.com/v5.0/tutorial/update-documents/) podremos obtener todas las opciones de la actualización.
 
 Ejemplo vamos actualizar a filtrar los documentos que son *mesa* para poner que el tipo de material es *madera*, hay u
 
@@ -252,3 +252,32 @@ db.mitabla.find({mueble:"mesa"},{mueble:1,material:1})
 Veremos los registros actualizados:
 
 ![Campos en el filtro](/images/mongodb/gui/robo_update_collection.png)
+
+## Borrado de documentos
+
+En la [documentación oficial](https://docs.mongodb.com/v5.0/tutorial/remove-documents/) podremos obtener todas las opciones del borrado.
+
+Para el borrado tenemos dos opciones:
+
+* db.collection.deleteOne()
+* db.collection.deleteMany()
+
+La primera solo borrará el primer registro que cumpla la condición:
+
+```tpl
+use ejemplo
+
+db.mitabla.deleteOne({mueble:'mesa'})
+```
+
+Veremos el registro que se borra:
+
+![Borrado de un solo registro](/images/mongodb/gui/robo_delete_collection.png)
+
+Para borrar varios registros que cumplan la condición es con la opción *deleteMany*. Y si queremos borrar todos los registros hay que hacer lo siguiente:
+
+```tpl
+use ejemplo
+
+db.mitabla.deleteMany({})
+```
