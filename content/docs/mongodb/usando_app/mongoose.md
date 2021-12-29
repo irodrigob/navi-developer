@@ -24,23 +24,24 @@ import mongoose from "mongoose";
 
 const MongoDb = process.env.MONGODB_URI;
 
-export const connectDb = async () => {
-  // La configuración es una por defecto que he visto que evita que salte warnings.
-  try {
-    await mongoose.connect(MongoDb, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useFindAndModify: false,
-      useCreateIndex: true,
-    });
+mongoose
+  .connect(MongoDb, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true,
+  })
+  .then(() => {
     console.log("db success connect");
-  } catch (err) {
-    console.log("error connecting to database");
-    console.log(err);    
-  }
-};
+  })
+  .catch((error) => {
+    console.log("error connecting to database: ");
+    console.log(err);
+  });
 ```
-Para el ejemplo voy a conectarme a la versión cloud que tiene MongoDB, en este [artículo](https://irodrigob.github.io/docs/mongodb/cloud/) se da más detalle de como hacerlo, por ello la URI la tengo en una variable de entorno ya que contiene usuario y contraseña. Pero la URL que se usa esta explicada en este [artículo](https://irodrigob.github.io/docs/mongodb/cloud/gui_accesocloud/).
+Para el ejemplo voy a conectarme a la versión cloud que tiene MongoDB, en este [artículo](https://irodrigob.github.io/docs/mongodb/cloud/) se da más detalle de como hacerlo. Uso una variable de entorno que contiene la URL con el usuario y contraseña para que no sea visible en el códigp. Como se construye la URL y como se obtiene esta explicada en este [artículo](https://irodrigob.github.io/docs/mongodb/cloud/gui_accesocloud/).
+
+En este archivo no hago ningún export del código porque lo que haré es importarlo directamente. El motivo es que el import solo se ejecuta una vez aunque lo llamaes varias veces. De esta manera cuando se importe en el código la conexión se llamará solo una vez.
 
 # Creando el modelo
 
@@ -50,6 +51,7 @@ Siguiendo la collection que cree en este [artículo donde hablo como acceder ví
 
 ```tpl
 import mongoose from "mongoose";
+import uniqueValidator from "mongoose-unique-validator";
 
 const miTablaSchema = new mongoose.Schema({
   name: {
@@ -66,14 +68,18 @@ const miTablaSchema = new mongoose.Schema({
 });
 
 miTablaSchema.index({ name: "name" });
+miTablaSchema.plugin(uniqueValidator);
 
 export default mongoose.model("MiTabla", miTabla);
+
 ```
 
 En la colección he definido los siguientes campos:
 
 * name -> Que será será de tipo *String* y como es un campo importe le he indicado que sea obligatorio y con valor único. 
 * material y medidas que será de tipo *String*.
+
+He añadido un plugin que da más detalle, o da mejor detalle según he leído, cuando hay duplicados cuando detecta que un campo tiene el atributo *unique: true*.
 
 Debido a que hay que usar *export default* hay que crear un fichero por modelo.
 
