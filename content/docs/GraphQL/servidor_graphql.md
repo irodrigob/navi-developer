@@ -144,5 +144,13 @@ Para poder probar las consultas hay que configurar los resolvers, pero antes, ha
 
 # Conectado MongoDB
 
-La conexión con MongoDB se hace en este [artículo](https://irodrigob.github.io/docs/mongodb/usando_app/mongoose/) aparte porque es una configuración que sirve tanto para usarse en aplicación con GraphQL o sin el.
+la parte de configuración de la conexión con MongoDB se hace en este [artículo](https://irodrigob.github.io/docs/mongodb/usando_app/mongoose/) aparte porque es una configuración que sirve tanto para usarse en aplicación con GraphQL o sin el.
+
+Lo que si que hay que añadir en el fichero *graphql.js* dentro de la ruta *pages->api* es lo siguiente sentencia:
+
+```tpl
+import "db/db.js";
+```
+
+La gracía de los import que solo se va ejecutar una vez aunque se llame varias veces, por eso se pone en el archivo que inicializa el servidor de Apollo.
 
