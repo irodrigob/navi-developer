@@ -77,6 +77,11 @@ ready - started server on 0.0.0.0:3000, url: http://localhost:3000
 info  - Loaded env from D:\github\nextjs-graphql-sample\.env.local
 event - compiled client and server successfully in 1062 ms (171 modules)
 ```
+Y en la propia consola donde hemos ejecuta el *npm run dev* no saldrá este este:
+
+```
+Debugger attached.
+```
 
 Con esto los breakpoints que pongamos en el código se nos parará cuando estemos probando la aplicación.
 
