@@ -111,22 +111,37 @@ export const typeDefs = gql`
     anchura: Int
     unidad: String
   }
-  type Mitabla {
+  type Product {
     _id: ID
     mueble: String!
     material: String
     medidas: Medidas
   }
-
   type Query {
-    getAll: [Mitabla]
-    getMuebles(mueble: String!): [Mitabla]
-    getSingleMueble(mueble: String!): Mitabla
+    getAll: [Product]
+    getMuebles(mueble: String!): [Product]
+    getSingleMueble(mueble: String!): Product
+  }
+
+  type Mutation {
+    newProduct(mueble: String!, material: String): Product
   }
 `;
 ```
 
-En este schema he creado dos tipos y una query, las mutation las dejo para más adelante. En esta misma sección hay una artícul donde iré poniendo la info que crea interesante sobre los schemas.
+En este schema he creado dos tipos, una query y un mutation. Para ver un ejemplo de su funcionamiento.
+
+# Conectado MongoDB
+
+La parte de configuración de la conexión con MongoDB se hace en este [artículo](https://irodrigob.github.io/docs/mongodb/usando_app/mongoose/) aparte porque es una configuración que sirve tanto para usarse en aplicación con GraphQL o sin el.
+
+Lo que si que hay que añadir en el fichero *graphql.js* dentro de la ruta *pages->api* es lo siguiente sentencia:
+
+```tpl
+import "db/config";
+```
+
+La gracía de los import que solo se va ejecutar una vez aunque se llame varias veces, por eso se pone en el archivo que inicializa el servidor de Apollo.
 
 # Probando en sandbox
 
@@ -142,15 +157,5 @@ Por defecto nos sale las querys pero si le damos a *Objects* podemos los tipos d
 
 Para poder probar las consultas hay que configurar los resolvers, pero antes, hay que conectar MongoDB con el servidor de GraphQL.
 
-# Conectado MongoDB
 
-la parte de configuración de la conexión con MongoDB se hace en este [artículo](https://irodrigob.github.io/docs/mongodb/usando_app/mongoose/) aparte porque es una configuración que sirve tanto para usarse en aplicación con GraphQL o sin el.
-
-Lo que si que hay que añadir en el fichero *graphql.js* dentro de la ruta *pages->api* es lo siguiente sentencia:
-
-```tpl
-import "db/db.js";
-```
-
-La gracía de los import que solo se va ejecutar una vez aunque se llame varias veces, por eso se pone en el archivo que inicializa el servidor de Apollo.
 
