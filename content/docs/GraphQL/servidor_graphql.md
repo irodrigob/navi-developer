@@ -155,7 +155,7 @@ Si le damos al botón *Query your server*:
 
 Por defecto nos sale las querys pero si le damos a *Objects* podemos los tipos de datos que hemos definido.
 
-Para poder probar las consultas hay que configurar los resolvers, pero antes, hay que conectar MongoDB con el servidor de GraphQL.
+Para poder probar las consultas y las mutations hay que implementar el resolver que lo haremos en un artículo aparte.
 
 
 
