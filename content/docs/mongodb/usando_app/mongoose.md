@@ -1,6 +1,6 @@
 ---
-title: Mongoose
-description: Conector Mongoose
+title: Conector Mongoose
+description: Conector Mongoose para MongoDB
 ---
 
 # Introducción

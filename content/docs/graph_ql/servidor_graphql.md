@@ -1,6 +1,6 @@
 ---
-title: Servidor GraphQL
-description: Servidor GraphQL
+title: Configurando servidor GraphQL
+description: Configuando el servidor GraphQL
 ---
 
 # Introducción

@@ -79,5 +79,7 @@ Tenemos dos tipos definidos: Medidas y Product. El tipo principal sería *Produc
 
 El tipo *Medidas* tendrá tres campos y que se usará como definición de un campo del tipo *Product*. Este campo servirá para ver como podemos datos dentro de un campo sin usar tablas relacionados como haríamos en base de datos SQL.
 
+Un tema importante, que supongo que se da por asumido, es que los campos que pongamos en los tipos tienen que tener el mismo nombre que en el sistema que vamos a recuperar,o actualizar, los datos. Si los campos son distintos no va funcionar.
+
 
 
