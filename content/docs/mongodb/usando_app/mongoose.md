@@ -93,7 +93,8 @@ const ProductSchema = new mongoose.Schema({
 ProductSchema.index({ name: "mueble" });
 ProductSchema.plugin(uniqueValidator);
 
-let Product = mongoose.model("Product", ProductSchema);
+let Product =
+  mongoose.models.Product || mongoose.model("Product", ProductSchema);
 export default Product;
 
 ```
@@ -105,7 +106,9 @@ En la colección he definido los siguientes campos:
 
 He añadido un plugin que da más detalle, o da mejor detalle según he leído, cuando hay duplicados cuando detecta que un campo tiene el atributo *unique: true*.
 
-Debido a que hay que usar *export default* hay que crear un fichero por modelo.
+Para evitar el error: *OverwriteModelError: Cannot overwrite `Product` model once compiled* pone en la definición de la variable *Product* que si el modelo ha sido creado previamente devuelva el método y no lo vuelve a crear.
+
+Como hay que usar *export default* hay que crear un fichero por modelo.
 
 # Usando la base de datos
 
