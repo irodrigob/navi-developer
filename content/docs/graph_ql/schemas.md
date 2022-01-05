@@ -30,6 +30,16 @@ export const typeDefs = gql`
     material: String
     medidas: Medidas
   }
+  input InputMedidas {
+    altura: Int
+    anchura: Int
+    unidad: String
+  }
+  input InputProduct {
+    mueble: String!
+    material: String
+    medidas: InputMedidas
+  }
   type Query {
     getAll: [Product]
     getMuebles(mueble: String!): [Product]
@@ -38,8 +48,10 @@ export const typeDefs = gql`
 
   type Mutation {
     newProduct(mueble: String!, material: String): Product
+    newCompleteProduct(input: InputProduct): Product
   }
 `;
+
 ```
 
 Todo lo que se define en GraphQL tiene que ir dentro de *gql``*. Y la estructura es como la de un JSON.
@@ -81,5 +93,16 @@ El tipo *Medidas* tendrá tres campos y que se usará como definición de un cam
 
 Un tema importante, que supongo que se da por asumido, es que los campos que pongamos en los tipos tienen que tener el mismo nombre que en el sistema que vamos a recuperar,o actualizar, los datos. Si los campos son distintos no va funcionar.
 
+# Input
+
+Los tipos *input* se utilizan para definir datos complejos que se van a utilizar en los mutation. En este caso, y viendo algunos ejemplos, les pongo el prefijo *Input* delante para identificarlos.
+
+# Query y mutation
+
+El funcionamiento de las query y mutations son idénticas. La estructura es:
+
+* Primero el nombre de la función que se implementará en el resolvers.
+* Entre paréntesis los parámetros, si los tuviese. El parámetro siempre es *<nombre parametro>:<tipo>*
+* Finalmente se indica el tipo de salida
 
 

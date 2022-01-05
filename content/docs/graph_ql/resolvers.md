@@ -35,8 +35,12 @@ export const resolvers = {
     newProduct: (root, args) => {
       const row = new Product({ ...args });
       return row.save();
+    },    
+  },  
+    newCompleteProduct: (root, args) => {
+      const row = new Product({ ...args.input });
+      return row.save();
     },
-  },
 };
 ```
 
@@ -48,6 +52,8 @@ En cualquier caso, en todas las funciones tienen que devolver algo. Ese algo ser
 Otro detalle es que en las funciones tienen dos argumentos:
 
 * root -> Son los datos de la función padre. Esto se usa cuando vas construyendo consultas anidadas o quieres quieres formatear campos a partir de los obtenidos. Tengo pendiente de un ejemplo para ver como funciona.
-* args -> Argumentos de la función. Esto va ligado con el parámetro *root*, ya que creo que se pasan los datos de la función superior, y también va ligado en las mutation porque son los parámetros que se definen en los schemas.
+* args -> Argumentos de la función. Esto va ligado con el parámetro *root*, ya que creo que se pasan los datos de la función superior, y también va ligado en las mutation porque son los parámetros que se definen en los schemas. En el mutation *newCompleteProduct* se recuperará el parámetro *input* que se ha definido en el schema.
+
+
 
 

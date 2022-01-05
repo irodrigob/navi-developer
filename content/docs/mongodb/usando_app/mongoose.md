@@ -86,7 +86,9 @@ const ProductSchema = new mongoose.Schema({
     type: String,
   },
   medidas: {
-    type: String,
+    altura: Number,
+    anchura: Number,
+    unidad: String,
   },
 });
 
@@ -99,10 +101,14 @@ export default Product;
 
 ```
 
-En la colección he definido los siguientes campos:
+En la colección he definido los siguientes campos de dos maneras posibles.
 
 * name -> Que será será de tipo *String* y como es un campo importe le he indicado que sea obligatorio y con valor único. 
-* material y medidas que será de tipo *String*.
+* material -> Es un campo string.
+* medidas -> Es un campo estructurado, es decir, un campo que puede tener otro documento asociado. Esto en una base de datos relacional habría que crear dos tablas y relacionarlas, en MongoDB, al ser no-SQL, podemos poner otro documento en un campo. Podemos ir tantos niveles com queramos.
+  * Dentro de medidas tenemos tres campos que los definimos directamente sin necesidad de abrir *{}* para indicar los atributos del campo.
+
+
 
 He añadido un plugin que da más detalle, o da mejor detalle según he leído, cuando hay duplicados cuando detecta que un campo tiene el atributo *unique: true*.
 

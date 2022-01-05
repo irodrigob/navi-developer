@@ -43,7 +43,7 @@ El paso final es ejecutar la query: ![Ejecutar query](/images/graphql/servidor/b
 
 ![Operacion query seleccionada4](/images/graphql/servidor/operacion_query_seleccionada4.png)
 
-# Añadiendo datos
+# Inserción simple
 
 Vamos aprovechar que se pueden crear pestaña con este icono: ![Añadir pestaña](/images/graphql/servidor/boton_anyadir_pestanya.png) para añadir la mutation *newProduct*:
 
@@ -85,3 +85,10 @@ Ahora, si volvemos a la pestaña donde tenemos la consulta y la ejecutamos verem
 
 ![Operacion query seleccionada5](/images/graphql/servidor/operacion_query_seleccionada5.png)
 
+# Inserción con subdocumentos
+
+Ahora vamos a realizar una inserción con subdocumentos. Es decir, vamos a llamar al método *newCompleteProduct* para ver su funcionamiento. Para la llamada vamos a usar las variables para el paso del parámetro. La llamada sería esta:
+
+![mutation con subdocuments](/images/graphql/servidor/operacion_mutation_subdocuments.png)
+
+La verdad es que con el asistente es muy sencilla probar este tipo de servicios porque te va construyendo los niveles que quieres utilizar.
