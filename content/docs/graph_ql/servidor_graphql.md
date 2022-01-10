@@ -17,18 +17,20 @@ Antes de hacer la instalación he creado la siguiente estructura de carpetas en 
 |- pages
 |--- api
 |----- graphql.js
-|----- resolvers
-|------- index.js
-|----- schemas
-|------- index.js
+|- graphql
+|--- resolvers
+|----- index.js
+|--- schemas
+|----- index.js
 ```
 
 Que es cada cosa:
 
 * Carpeta API --> Es la carpeta que se usa para poder montar servicios en NextJS. Esta página cuando la aplicación esta corriendo se mapea a */api/**. Diriamos que es el endpoint de los servicios.
-* Archivo graphql.js --> Es donde se indica la configuración para que arranque el servidor.
-* Carpeta resolvers --> Es donde donde se ejecutan las consultas. En nuestro caso serán las llamadas a MongoDB. 
-* Carpeta schemas --> Es donde se definen los tipos de datos que se usarán en las consultas o mutaciones. A modo de simil sería el WSDL en los Webservices o los Entitys en servicios REST.
+  * Archivo graphql.js --> Es donde se indica la configuración para que arranque el servidor.
+* Carpeta graphql es donde pondré la ficheros de configuración
+  * Carpeta resolvers --> Es donde donde se ejecutan las consultas. En nuestro caso serán las llamadas a MongoDB. 
+  * Carpeta schemas --> Es donde se definen los tipos de datos que se usarán en las consultas o mutaciones. A modo de simil sería el WSDL en los Webservices o los Entitys en servicios REST.
 
 El paquete que instalaremos es el *apollo-server-micro* mediante la sentencia:
 
