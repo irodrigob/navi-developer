@@ -160,4 +160,36 @@ Por defecto nos sale las querys pero si le damos a *Objects* podemos los tipos d
 Para poder probar las consultas y las mutations hay que implementar el resolver que lo haremos en un artículo aparte.
 
 
+# Opciones
+
+## Desactivando el Studio 
+
+Hemos visto que cuando se entra a la URL *http://localhost/api/graphql* aparece un sandbox del studio para poder probar las opciones. Pero en un entorno de producción no queremos eso para ello el Apollo Server permite añadir plugins donde uno de ellos sirve para eso. Para ello tenemos que ir el fichero *graphql.js* e importar estas dos librerías:
+
+```tpl
+import {
+  ApolloServerPluginLandingPageLocalDefault,
+  ApolloServerPluginLandingPageProductionDefault,
+} from "apollo-server-core";
+```
+
+Luego en la creación de la instancia del *apolloServer* añadir lo siguiente:
+
+```tpl
+const apolloServer = new ApolloServer({
+  typeDefs,
+  resolvers,
+  plugins: [
+    process.env.ENVIRONMENT === "production"
+      ? ApolloServerPluginLandingPageProductionDefault({
+          graphRef: "my-graph-id@my-graph-variant",
+          footer: false,
+        })
+      : ApolloServerPluginLandingPageLocalDefault({ footer: false }),
+  ],
+});
+```
+
+Aquí vemos que si estamos en el entonro de production se deshabilita el stidio mientras que en desarrollo si que se mostrará. Este código es el que sale en la documentación oficial del Apollo Server.
+
 
