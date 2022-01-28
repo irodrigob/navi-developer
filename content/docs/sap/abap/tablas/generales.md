@@ -21,7 +21,6 @@ TLOCK | Tabla de bloqueos de objetos en ordenes.
 T045DTA	| Partidas que se graban en la FBWE. Si se borran permite reprocesarlas.
 VAPMA | Tabla que contiene los datos de VBAK y VBAP pero con muchos menos campos. Y lo más importantes son claves.
 STXFTXT | Tabla de textos de formularios
-SRGBTBREL | Tabla con los adjuntos del GOS. Es como la TOA01 del archivelink
-SGOSATTR | Tabla que sirve para configurar acciones que salen en el boton del GOS de SAP
 BALHDR | Tabla de cabecera con logs que se generan con la SLG0 y SLG1
 SDOKFEXT_C | Tabla de cliente para poner los mimetype que faltan para que pueda funcionar el GOS
+USER_ADDRP | Vista/Tabla que permite obtener el nombre de usuario de la tabla de direcciones

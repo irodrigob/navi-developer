@@ -22,6 +22,7 @@ RSAOT1 | Ejemplo de cómo subir y leer documento en archivelink
 Tabla | Descripción
 --------|--------
 SGOSATTR | Tabla para parametrizar las opciones del menu de archivelink en transacciones
+SRGBTBREL | Tabla con los adjuntos del GOS. Es como la TOA01 del archivelink
 
 # Funciones
 
