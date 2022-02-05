@@ -1,6 +1,6 @@
 ---
-title: Activar debugging de Next JS en VS Code
-description: Activar debugging de Next JS en VS Code
+title: Utilizar variables de entorno
+description: Utilizar variables de entorno
 ---
 
 # Funcionamiento
