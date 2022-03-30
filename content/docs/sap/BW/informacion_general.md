@@ -28,3 +28,8 @@ Los datos que aquí se muestran serán los mismos que salgan en cualquier herami
 # Variables del query designer
 
 En el query designer para poder hacer filtros variables, es decir que se pasan los datos a filtrar por parámetro, hay que crear variable y asignarsela al campo. Pues una vez se crea la variable no es posible editarla o borrar, la única manera de hacerlo es a través de la tabla *RSZGLOBV*. En esta tabla filtrando por el campo *VNAM* por la variable obtenemos los datos de la variable, se podrá borrar o modificar la configuración de las variables.
+
+# Como llamar a Querys creadas en el Query Designer
+
+En mi github he creado un [repositorio de utilidades de BW](https://github.com/irodrigob/ABAP_BW_UTILS). En este repositorio esta la clase *ZCL_CA_BW_QUERY_BEX* que encapsula las llamadas de querys creados en el Query Designer.
+
