@@ -15,8 +15,7 @@ En este programa cambia los valores de variables para secuencias de planificaciÃ
 *&---------------------------------------------------------------------*
 *& Report ZRTC_CUSTOM_PROCESS
 *&---------------------------------------------------------------------*
-*& Programa de ejemplo para actualizar las variantes de secuencias de
-*& planificacion que se definen en la transacciÃ³n RSPLAN.
+*&
 *&---------------------------------------------------------------------*
 REPORT zrtc_custom_process.
 
@@ -83,9 +82,9 @@ START-OF-SELECTION.
 
     DATA(lv_error_bcf) = abap_false.
 
-*    PERFORM save_values_variant USING 'ZPS_RTC_ACTUAL_NOSAP' CHANGING lv_error_bcf mv_variant mv_variant_desc.
+    PERFORM save_values_variant USING 'ZPS_RTC_ACTUAL_NOSAP' CHANGING lv_error_bcf mv_variant mv_variant_desc.
     IF lv_error_bcf = abap_false.
-*      PERFORM execute_plseq USING 'ZPS_RTC_STEP_1' mv_variant mv_variant_desc.
+      PERFORM execute_plseq USING 'ZPS_RTC_STEP_1' mv_variant mv_variant_desc.
     ENDIF.
 
   ENDIF.
@@ -94,9 +93,9 @@ START-OF-SELECTION.
   IF p_appr EQ abap_true.
     DATA(lv_error_appr) = abap_false.
 
-*    PERFORM save_values_variant USING 'ZPS_RTC_ACTUAL_NOSAP' CHANGING lv_error_appr mv_variant mv_variant_desc.
+    PERFORM save_values_variant USING 'ZPS_RTC_ACTUAL_NOSAP' CHANGING lv_error_appr mv_variant mv_variant_desc.
     IF lv_error_appr = abap_false.
-*      PERFORM execute_plseq USING 'ZPS_RTC_STEP_1' mv_variant mv_variant_desc.
+      PERFORM execute_plseq USING 'ZPS_RTC_STEP_1' mv_variant mv_variant_desc.
     ENDIF.
   ENDIF.
 
@@ -226,6 +225,10 @@ FORM execute_plseq USING pe_seqnam TYPE rspls_seqnm
       e_tk_return = lt_return[].
 
   PERFORM add_bapiret2_2_return_data USING 'ZPS_RTC_STEP_1' pe_variant pe_variant_desc lt_return.
+
+  IF NOT line_exists( lt_return[ type = 'E' ] ).
+    CALL FUNCTION 'RSPLSTD_DATA_SAVE'.
+  ENDIF.
 ENDFORM.
 
 FORM show_alv.
@@ -250,7 +253,7 @@ FORM show_alv.
       lo_column->set_medium_text( CONV #( TEXT-c02 ) ).
       lo_column->set_long_text( CONV #( TEXT-c02 ) ).
 
-      lo_alv->display(  ).
+      lo_alv->display( ).
 
     CATCH cx_salv_msg.
   ENDTRY.
