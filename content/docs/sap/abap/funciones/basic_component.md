@@ -26,6 +26,7 @@ F4IF_INT_TABLE_VALUE_REQUEST | Permite hacer ayudas para búsqueda en base a una
 RS_REFRESH_FROM_SELECTOPTIONS |	Recupera los valores de los parametros de una pantalla de selección. Ideal para usarlo despues con el WITH SELECTION-TABLE
 SYSTEM_CALLSTACK | Funciones para ver la pilas de llamada de un progama
 BP_JOB_READ | Lee los datos de un job. El OPCODE para leerlo todo es el 36.
+TH_IN_UPDATE_TASK | Función que devuelve si se esta corriendo en una cola de actualización. Si el parámetro de salida devuelve 1 se esta en un proceso actualización.
 
 
 ## Diccionario de datos
