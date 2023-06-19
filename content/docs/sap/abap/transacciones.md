@@ -23,6 +23,7 @@ SM01 | Bloquea transacciones estándar
 SLXT | Guarda las traducciones hechas en la transacción SE63
 DWDM | Ejemplos controles de pantalla
 BAPI | Permite ver los objetos de negocio con sus respectiva funcionalidad. Y sobretodo que función realiza dicha funcionalidad.
+RMPS_SET_SUBSTITUTE | Permite realizar asignaciones de sustitutos a personas libremente. Esos sustitutos son los del SAP Office que se usán en WF.
 
 ## Financieras
 
